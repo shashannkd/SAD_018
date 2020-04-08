@@ -1,0 +1,25 @@
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    top:0px;
+    /* background-image: url("img/one.jpg"); */
+
+}
+
+
+h1{
+    background-color: #383838;
+    text-align: center;
+    color: #d8d8d8;
+    padding: 10px;
+    margin-block-start:3px;
+    margin-block-end:3px;
+
+}
+
+img{
+    width: 33%;
+}
+
