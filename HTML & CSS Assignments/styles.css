@@ -18,6 +18,7 @@ h1 {
 img {
     width: 25%;
     float: right;
+    border: 3px solid #fadfb0;
     /* margin: 10px 10px 0 0; */
 }
 
@@ -42,4 +43,11 @@ table td.heading {
 
 p {
     font-size: large;
+}
+
+#projects{
+    padding: 10px;
+}
+summary{
+    font-size: 24px;
 }
