@@ -1,0 +1,126 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-family: 'Roboto', sans-serif;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+html body a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
+html body p {
+  margin-block-start: 0;
+  padding: 17px 0px 0px 20px;
+  display: block;
+}
+html body header div.topSection {
+  padding: 3px;
+  margin: 0;
+  background-color: #00863c;
+  text-align: right;
+}
+html body header div.topSection a {
+  color: #f1f1f1;
+  padding: 5px;
+}
+html body header div.topSection a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+html body header div.logoSection {
+  overflow: hidden;
+}
+html body header div.logoSection div#logo img {
+  width: 50px;
+  height: 78px;
+  margin-left: 100px;
+  padding: 5px;
+  float: left;
+}
+@media only screen and (min-width : 320px) and (max-width : 580px) {
+  html body header div.logoSection div#logo img {
+    width: 30px;
+    height: 51px;
+    margin: 15px;
+  }
+}
+html body header div.logoSection div#nameContainer {
+  color: #224f82;
+  float: left;
+}
+html body header div.logoSection div#nameContainer p#title {
+  font-weight: bold;
+  font-size: 25px;
+}
+@media only screen and (min-width : 320px) and (max-width : 580px) {
+  html body header div.logoSection div#nameContainer p#title {
+    font-size: 20px;
+    padding: 21px 0px 0px 5px;
+  }
+}
+@media only screen and (max-width : 360px) {
+  html body header div.logoSection div#nameContainer p#title {
+    font-size: 16px;
+    padding: 25px 0px 0px 5px;
+  }
+}
+html body header div.logoSection div#nameContainer p#subTitle {
+  font-size: 18px;
+  margin-block-start: -34px;
+}
+@media only screen and (min-width : 320px) and (max-width : 580px) {
+  html body header div.logoSection div#nameContainer p#subTitle {
+    font-size: 16px;
+    margin-block-start: -34px;
+    padding: 21px 0px 0px 0px;
+  }
+}
+@media only screen and (max-width : 360px) {
+  html body header div.logoSection div#nameContainer p#subTitle {
+    font-size: 12px;
+    margin-block-start: -34px;
+    padding: 25px 0px 0px 0px;
+  }
+}
+html body nav {
+  margin: 0;
+  background-image: linear-gradient(to bottom, #3b9a59, #224f82);
+  text-align: center;
+}
+html body nav div ul {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+html body nav div ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+html body nav div ul li a {
+  display: inline-block;
+  padding: 12px 17.5px;
+  color: #f1f1f1;
+}
+html body nav div ul li a:hover {
+  background-image: linear-gradient(to top, #3b9a59, #224f82);
+  color: #ffffff;
+}
+html body div.imageContainer ul {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+html body div.imageContainer ul img {
+  width: 100%;
+  height: 90%;
+}

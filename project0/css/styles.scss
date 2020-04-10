@@ -1,0 +1,117 @@
+$links-text-color: #f1f1f1;
+// $links-background-color: #147228;
+$white: #ffffff;
+$title: #55545b;
+$title2: #be1e12;
+$font-size: 28px;
+// $desktopResolution: ~"only screen and (min-width : 1024px)";
+// $iPhone6 : ~"only screen and (min-width : 320px) and (max-width : 580px)";
+// $iPhone5 : ~"only screen and (max-width : 360px)";
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    font-family: "Roboto";
+
+    body {
+        margin: 0;
+        padding: 0;
+        left: 0;
+        top: 0;
+        a {
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        header {
+            div {
+                &.topSection {
+                    padding: 3px;
+                    margin: 0;
+                    height: 10px;
+                    background-color: $title;
+                }
+                &.logoSection {
+                    div {
+                        &#logo {
+                            display: inline;
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+                                // margin-left: 100px;
+                                // padding: 5px;
+                                // float: left;
+                            }
+                        }
+                        &#nameContainer {
+                            color: $title;
+                            text-align: center;
+                            display: block;
+                            a {
+                                &#title {
+                                    font-weight: bold;
+                                    font-size: 44pt;
+                                    margin-block-end: 0;
+                                    margin-block-start: 0;
+
+                                    padding: 15px 0 15px 0;
+
+                                    // @media $iPhone6{
+                                    // 	font-size:20px;
+                                    // 	padding:21px 0px 0px 5px;
+                                    // }
+                                    // @media $iPhone5{
+                                    // 	font-size:16px;
+                                    // 	padding:25px 0px 0px 5px;
+                                    // }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        nav {
+            margin: 0;
+            background-image: linear-gradient(to bottom, $title, $title2);
+            text-align: center;
+            div {
+                ul {
+                    margin-block-start: 0px;
+                    margin-block-end: 0px;
+                    padding-inline-start: 0px;
+                    li {
+                        display: inline-block;
+                        list-style-type: none;
+                        a {
+                            display: inline-block;
+                            padding: 15px 20px;
+                            color: $links-text-color;
+                            &:hover {
+                                background-image: linear-gradient(to bottom, $title2, $title);
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div {
+            &.imageContainer {
+                ul {
+                    margin-block-start: 0px;
+                    margin-block-end: 0px;
+                    padding-inline-start: 0px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

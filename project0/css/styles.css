@@ -1,0 +1,101 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-family: "Roboto";
+}
+
+html body {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+
+html body a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+html body header div.topSection {
+  padding: 3px;
+  margin: 0;
+  height: 10px;
+  background-color: #55545b;
+}
+
+html body header div.logoSection div#logo {
+  display: inline;
+}
+
+html body header div.logoSection div#logo img {
+  width: 100px;
+  height: 100px;
+}
+
+html body header div.logoSection div#nameContainer {
+  color: #55545b;
+  text-align: center;
+  display: block;
+}
+
+html body header div.logoSection div#nameContainer a#title {
+  font-weight: bold;
+  font-size: 44pt;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  padding: 15px 0 15px 0;
+}
+
+html body nav {
+  margin: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#55545b), to(#be1e12));
+  background-image: linear-gradient(to bottom, #55545b, #be1e12);
+  text-align: center;
+}
+
+html body nav div ul {
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+html body nav div ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+html body nav div ul li a {
+  display: inline-block;
+  padding: 15px 20px;
+  color: #f1f1f1;
+}
+
+html body nav div ul li a:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#be1e12), to(#55545b));
+  background-image: linear-gradient(to bottom, #be1e12, #55545b);
+  color: #ffffff;
+}
+
+html body div.imageContainer ul {
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+html body div.imageContainer ul img {
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
