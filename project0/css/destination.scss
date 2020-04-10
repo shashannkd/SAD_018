@@ -1,12 +1,11 @@
 $links-text-color: #f1f1f1;
-// $links-background-color: #147228;
 $white: #ffffff;
 $title: #55545b;
 $title2: #be1e12;
 $font-size: 28px;
-// $desktopResolution: ~"only screen and (min-width : 1024px)";
-// $iPhone6 : ~"only screen and (min-width : 320px) and (max-width : 580px)";
-// $iPhone5 : ~"only screen and (max-width : 360px)";
+%fontbold {
+    font-weight: bold;
+}
 html {
     height: 100%;
     width: 100%;
@@ -54,21 +53,15 @@ html {
                             display: block;
                             a {
                                 &#title {
-                                    font-weight: bold;
+                                    @extend %fontbold;
                                     font-size: 44pt;
+                                    @media (max-width: 499px) {
+                                        font-size: 30pt;
+                                    }
                                     margin-block-end: 0;
                                     margin-block-start: 0;
 
                                     padding: 15px 0 15px 0;
-
-                                    // @media $iPhone6{
-                                    // 	font-size:20px;
-                                    // 	padding:21px 0px 0px 5px;
-                                    // }
-                                    // @media $iPhone5{
-                                    // 	font-size:16px;
-                                    // 	padding:25px 0px 0px 5px;
-                                    // }
                                 }
                             }
                         }
@@ -103,19 +96,34 @@ html {
             }
         }
         div {
-            font-size: $font-size;
+            margin-left: 10px;
+            margin-top: 10px;
+            font-size: 20px;
             &#date {
                 font-weight: 600;
             }
             &#tripImage {
                 img {
-                    width: 33%;
+                    width: 30%;
                     float: right;
                 }
             }
             &#placesVisited {
-                h1 {
-                    color: red;
+                table {
+                    border: 2px solid black;
+                    border-collapse: collapse;
+                    padding: 3px;
+                    thead {
+                        background-color: gray;
+                        text-align: center;
+                        color: white;
+                    }
+                    th,
+                    td {
+                        border: 2px solid black;
+                        border-collapse: collapse;
+                        padding: 20px;
+                    }
                 }
             }
         }

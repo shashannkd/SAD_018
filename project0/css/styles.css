@@ -53,6 +53,12 @@ html body header div.logoSection div#nameContainer a#title {
   padding: 15px 0 15px 0;
 }
 
+@media (max-width: 499px) {
+  html body header div.logoSection div#nameContainer a#title {
+    font-size: 30pt;
+  }
+}
+
 html body nav {
   margin: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#55545b), to(#be1e12));
