@@ -44,14 +44,14 @@ html {
                             }
                         }
                         &#nameContainer {
-                            color: $title;
                             text-align: center;
                             display: block;
                             a {
                                 &#title {
+                                    color: $title;
                                     font-weight: bold;
-                                    font-size: 44pt;
-                                    @media (max-width: 499px) {
+                                    font-size: 45pt;
+                                    @media (max-width: 1024px) {
                                         font-size: 30pt;
                                     }
                                     margin-block-end: 0;

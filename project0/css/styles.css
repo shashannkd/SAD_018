@@ -38,14 +38,14 @@ html body header div.logoSection div#logo img {
 }
 
 html body header div.logoSection div#nameContainer {
-  color: #55545b;
   text-align: center;
   display: block;
 }
 
 html body header div.logoSection div#nameContainer a#title {
+  color: #55545b;
   font-weight: bold;
-  font-size: 44pt;
+  font-size: 45pt;
   -webkit-margin-after: 0;
           margin-block-end: 0;
   -webkit-margin-before: 0;
@@ -53,7 +53,7 @@ html body header div.logoSection div#nameContainer a#title {
   padding: 15px 0 15px 0;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 1024px) {
   html body header div.logoSection div#nameContainer a#title {
     font-size: 30pt;
   }

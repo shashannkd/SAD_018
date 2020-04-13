@@ -20,6 +20,7 @@ html {
         padding: 0;
         left: 0;
         top: 0;
+
         a {
             text-decoration: none;
             text-align: center;
@@ -42,20 +43,17 @@ html {
                             img {
                                 width: 100px;
                                 height: 100px;
-                                // margin-left: 100px;
-                                // padding: 5px;
-                                // float: left;
                             }
                         }
                         &#nameContainer {
-                            color: $title;
                             text-align: center;
                             display: block;
                             a {
                                 &#title {
+                                    color: $title;
                                     @extend %fontbold;
-                                    font-size: 44pt;
-                                    @media (max-width: 499px) {
+                                    font-size: 45pt;
+                                    @media (max-width: 1024px) {
                                         font-size: 30pt;
                                     }
                                     margin-block-end: 0;
@@ -96,9 +94,14 @@ html {
             }
         }
         div {
-            margin-left: 10px;
-            margin-top: 10px;
+            margin: 5px;
             font-size: 20px;
+            div[id="info"] {
+                p {
+                    text-align: justify;
+                    text-justify: inter-word;
+                }
+            }
             &#date {
                 font-weight: 600;
             }
@@ -106,15 +109,26 @@ html {
                 img {
                     width: 30%;
                     float: right;
+                    @media (max-width: 1024px) {
+                        width: 100%;
+                    }
                 }
             }
             &#placesVisited {
+                @media (max-width: 1024px) {
+                    width: 100%;
+                    padding-right: 20px;
+                }
                 table {
                     border: 2px solid black;
                     border-collapse: collapse;
                     padding: 3px;
+                    @media (max-width: 1024px) {
+                        font-size: 15px;
+                    }
+
                     thead {
-                        background-color: gray;
+                        background-color: $title;
                         text-align: center;
                         color: white;
                     }
@@ -123,6 +137,8 @@ html {
                         border: 2px solid black;
                         border-collapse: collapse;
                         padding: 20px;
+                        text-align: justify;
+                        text-justify: inter-word;
                     }
                 }
             }
