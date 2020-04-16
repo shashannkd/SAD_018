@@ -109,13 +109,13 @@ html body div#date {
   font-weight: 600;
 }
 
-html body div#tripImage img {
+html body div#placesVisited div[id="tripImage"] img {
   width: 30%;
   float: right;
 }
 
 @media (max-width: 1024px) {
-  html body div#tripImage img {
+  html body div#placesVisited div[id="tripImage"] img {
     width: 100%;
   }
 }

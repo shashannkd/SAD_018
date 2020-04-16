@@ -105,16 +105,17 @@ html {
             &#date {
                 font-weight: 600;
             }
-            &#tripImage {
-                img {
-                    width: 30%;
-                    float: right;
-                    @media (max-width: 1024px) {
-                        width: 100%;
+
+            &#placesVisited {
+                div[id="tripImage"] {
+                    img {
+                        width: 30%;
+                        float: right;
+                        @media (max-width: 1024px) {
+                            width: 100%;
+                        }
                     }
                 }
-            }
-            &#placesVisited {
                 @media (max-width: 1024px) {
                     width: 100%;
                     padding-right: 20px;
