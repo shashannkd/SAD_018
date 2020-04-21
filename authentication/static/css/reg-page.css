@@ -1,0 +1,79 @@
+body {
+  margin: 10px;
+  background-image: url("./images/one.jpg");
+  background-size: cover;
+}
+
+body header div#title {
+  text-align: center;
+  padding: 40px;
+}
+
+body header div#title a {
+  font-size: 60px;
+  font-weight: 700;
+  color: #023e81;
+  text-decoration: none;
+}
+
+body div[id="regform"] {
+  margin-top: 30px;
+  float: right;
+  margin-right: 15%;
+}
+
+body div[id="regform"] input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body div[id="regform"] input.textinputs {
+  border: none;
+  border-bottom: 2px solid black;
+  display: block;
+  width: 300px;
+}
+
+body div[id="regform"] input.textinputs:focus {
+  background-color: #111;
+  color: #ccc;
+}
+
+body div[id="regform"] div#gender select {
+  width: 233px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px 0 5px 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body div[id="regform"] input[name="dob"] {
+  width: 255px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body div[id="regform"] div button {
+  padding: 10px 32px;
+  border-radius: 5px;
+  background-color: #023e81;
+  border-color: #023e81;
+  color: #eee;
+  overflow: hidden;
+  text-decoration: none;
+  margin: 10px 0 10px 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=reg-page.css.map */

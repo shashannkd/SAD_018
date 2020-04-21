@@ -1,0 +1,61 @@
+body {
+  margin: 10px;
+  background-image: url("./images/one.jpg");
+  background-size: cover;
+}
+
+body header div#title {
+  text-align: center;
+  padding: 40px;
+}
+
+body header div#title a {
+  font-size: 60px;
+  font-weight: 700;
+  color: #023e81;
+  text-decoration: none;
+}
+
+body form div.textinputs {
+  margin: 10px auto;
+  display: block;
+}
+
+body form div.textinputs label {
+  font-weight: bold;
+}
+
+body form div.textinputs input {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid black;
+  width: 300px;
+}
+
+body form div.textinputs input:focus {
+  background-color: #111;
+  color: #ccc;
+}
+
+body form button {
+  padding: 10px 32px;
+  border-radius: 5px;
+  background-color: #023e81;
+  border-color: #023e81;
+  color: #eee;
+  overflow: hidden;
+  text-decoration: none;
+  margin: 10px 0 10px 10px;
+  cursor: pointer;
+}
+
+body form p {
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+/*# sourceMappingURL=login.css.map */
