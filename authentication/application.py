@@ -7,6 +7,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from flask import Flask, render_template, request, redirect, url_for
 from models import User
 from datetime import datetime
+import logging
 
 app = Flask(__name__)
 
@@ -19,6 +20,7 @@ if not os.getenv("DATABASE_URL"):
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
+logging.basicConfig(filename='log.log', level=logging.DEBUG)
 
 
 # Set up database
@@ -29,11 +31,11 @@ db = db_session()
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    name = "Welcome to Books Ville. Please continue to login."
+    # name = "Welcome to Books Ville. Please continue to login."
     if request.method == "GET":
         if session.get('data') is not None:
             return render_template("details.html", name=session.get('data'))
-    return render_template("index.html", name=name)
+    return render_template("index.html")
 
 
 @app.route("/auth", methods=["POST"])
@@ -47,8 +49,10 @@ def auth():
     if users is not None:
         if((uname == users.email) and (hashed_pwd == users.pswd)):
             session['data'] = uname
-            return render_template("details.html", name="Successfully logged in "+users.name)
-    return render_template('details.html', name=uname)
+            return render_template("details.html", name=users.name.capitalize())
+        else:
+            return render_template('index.html', name="Incorrect Credentials. Please try again.")
+    return render_template("index.html", name="You are not registered. Please click on Register Here.")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -61,14 +65,14 @@ def register():
         session["data"].append(name)
 
         email = request.form['email']
-        session["data"].append(email)
+        session["data"].append(email.lower())
 
         password = request.form['password']
-        hashed_pwd1 = hashlib.md5(hashed_pwd1.encode()).hexdigest()
+        hashed_pwd1 = hashlib.md5(password.encode()).hexdigest()
         session["data"].append(hashed_pwd1)
 
         password2 = request.form['password2']
-        hashed_pwd2 = hashlib.md5(hashed_pwd2.encode()).hexdigest()
+        hashed_pwd2 = hashlib.md5(password2.encode()).hexdigest()
         session["data"].append(hashed_pwd2)
 
         dob = request.form['dob']
@@ -78,10 +82,11 @@ def register():
             try:
                 user = User(email=email, name=name,
                             pswd=hashed_pwd1, dob=dob, timestamp=datetime.now())
-
                 db.add(user)
+
             except:
                 return render_template("index.html", name="Something went wrong. Please Try Again.")
+
             db.commit()
             return render_template("index.html", name="You are now a member of Books Ville. Please log in to continue.")
         else:
