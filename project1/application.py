@@ -67,6 +67,12 @@ def register():
         email = request.form['email']
         session["data"].append(email.lower())
 
+        is_user_present = db.execute("SELECT * FROM users WHERE email = :email",
+                                     {"email": email}).fetchone()
+
+        if is_user_present is not None:
+            return render_template("index.html", name="Already a user. Please Log in to continue.")
+
         password = request.form['password']
         hashed_pwd1 = hashlib.md5(password.encode()).hexdigest()
         session["data"].append(hashed_pwd1)
@@ -79,6 +85,7 @@ def register():
         session["data"].append(dob)
 
         if hashed_pwd1 == hashed_pwd2:
+
             try:
                 user = User(email=email, name=name,
                             pswd=hashed_pwd1, dob=dob, timestamp=datetime.now())
