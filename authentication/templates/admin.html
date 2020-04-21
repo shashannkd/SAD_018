@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Admin Page </title>
+        <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <table class="table" style="margin : 0 auto;">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Sl.No</th>
+                    <th scope="col">Email ID</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">TimeStamp</th>
+                </tr>
+            </thead>
+            {% set count = namespace(value=1) %}
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <th scope="row">{{ count.value }}</th>
+                    {% set count.value = count.value + 1 %}
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.name }}</td>
+                    <th>{{ user.pswd }}</th>
+                    <th>{{ user.dob }}</th>
+                    <td>{{ user.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+
+</html>
