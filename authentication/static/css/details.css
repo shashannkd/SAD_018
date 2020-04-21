@@ -16,6 +16,13 @@ body header div#title a {
   text-decoration: none;
 }
 
+body header div#logout {
+  font-size: 20px;
+  font-weight: 500;
+  color: #023e81;
+  text-align: right;
+}
+
 body h1 {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
