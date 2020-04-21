@@ -11,7 +11,7 @@ body header div#title {
 
 body header div#title a {
   font-size: 60px;
-  font-weight: 800;
+  font-weight: 700;
   color: #023e81;
   text-decoration: none;
 }
@@ -76,4 +76,4 @@ body div[id="regform"] div button {
   margin: 10px 0 10px 10px;
   cursor: pointer;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=reg-page.css.map */
