@@ -4,3 +4,9 @@ registration-page/static/css/register.css.map
 registration-page/static/css/home.css.map
 registration-page/__pycache__/application.cpython-38.pyc
 registration-page/static/css/reg-page.css.map
+authentication/env-set.bat
+authentication/log.log
+authentication/__pycache__/application.cpython-38.pyc
+authentication/__pycache__/models.cpython-38.pyc
+authentication/flask_session/61d59ef13abe7416c1f1310060b14f8f
+authentication/flask_session/2029240f6d1128be89ddc32729463129
