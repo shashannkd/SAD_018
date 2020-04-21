@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="../static/css/home.css">
+        <link rel="stylesheet" href="../static/css/details.css">
         <title>Home</title>
     </head>
 
@@ -14,6 +14,9 @@
         <header>
             <div id="title">
                 <a href="{{ url_for('register')}}" title="Go to Home">Books Ville</a>
+            </div>
+            <div id="logout">
+                <a href="{{url_for('logout')}}"></a>
             </div>
         </header>
         <h1>Welcome to Books Ville, {{ name }}!!</h1>

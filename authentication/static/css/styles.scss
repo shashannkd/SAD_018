@@ -19,6 +19,9 @@ body {
     }
 
     form {
+        h3 {
+            margin: $tenpx;
+        }
         div.textinputs {
             margin: $tenpx auto;
             display: block;

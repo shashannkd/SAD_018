@@ -16,6 +16,10 @@ body header div#title a {
   text-decoration: none;
 }
 
+body form h3 {
+  margin: 10px;
+}
+
 body form div.textinputs {
   margin: 10px auto;
   display: block;
@@ -58,4 +62,4 @@ body form p {
   font-size: 20px;
   text-align: center;
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=styles.css.map */
