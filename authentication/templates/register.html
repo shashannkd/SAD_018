@@ -13,13 +13,15 @@
     <body>
         <header>
             <div id="title">
-                <a href="{{ url_for('register') }}" title="Go to Home">Books Ville</a>
+                <a href="{{ url_for('index') }}" title="Go to Home">Books Ville</a>
+                <p>{{message}}</p>
             </div>
+
         </header>
         <div id="regform">
             <h3>New to Books Ville?</h3>
             <h5> Register Here. It's quick.</h5>
-            <form action="{{ url_for('details') }}" method="POST">
+            <form action="{{ url_for('register') }}" method="POST">
                 <div id="formcontents">
                     <b>Name:</b> <input type="text" name='name' placeholder="Enter Your Name" class="textinputs"
                         required>
