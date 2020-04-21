@@ -2,23 +2,33 @@
 <html>
 
     <head>
-        <title> Admin Page </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/admin.css">
         <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Admin Books Ville</title>
     </head>
 
     <body>
-        <table class="table" style="margin : 0 auto;">
+        <header>
+            <div id="title">
+                <a href="{{ url_for('index') }}" title="Go to Home">Books Ville</a>
+                <h2>List of all users registered to Books Ville</h2>
+            </div>
+        </header>
+        <table class="table table-bordered table-hover" style="margin : 0 auto;">
+            <caption>List of Users</caption>
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Sl.No</th>
-                    <th scope="col">Email ID</th>
-                    <th scope="col">Full Name</th>
+                    <th scope="col">S. No.</th>
+
+                    <th scope="col">Name of the User</th>
+                    <th scope="col">e-mail</th>
                     <th scope="col">Password</th>
-                    <th scope="col">DOB</th>
-                    <th scope="col">TimeStamp</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Timestamp</th>
                 </tr>
             </thead>
             {% set count = namespace(value=1) %}
@@ -27,10 +37,11 @@
                 <tr>
                     <th scope="row">{{ count.value }}</th>
                     {% set count.value = count.value + 1 %}
-                    <td>{{ user.email }}</td>
+
                     <td>{{ user.name }}</td>
-                    <th>{{ user.pswd }}</th>
-                    <th>{{ user.dob }}</th>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.pswd }}</td>
+                    <td>{{ user.dob }}</td>
                     <td>{{ user.timestamp }}</td>
                 </tr>
                 {% endfor %}
