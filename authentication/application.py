@@ -21,15 +21,18 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
-# # Set up database
+# Set up database
 engine = create_engine(os.getenv("DATABASE_URL"))
 db_session = scoped_session(sessionmaker(bind=engine))
 db = db_session()
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
     name = "Welcome to Books Ville. Please continue to login."
+    if request.method == "GET":
+        if session.get('data') is not None:
+            return render_template("details.html", name=session.get('data'))
     return render_template("index.html", name=name)
 
 
@@ -39,6 +42,12 @@ def auth():
     pwd = request.form['password']
     hashed_pwd = hashlib.md5(pwd.encode()).hexdigest()
 
+    users = db.query(User).get(uname)
+
+    if users is not None:
+        if((uname == users.email) and (hashed_pwd == users.pswd)):
+            session['data'] = uname
+            return render_template("details.html", name="Successfully logged in "+users.name)
     return render_template('details.html', name=uname)
 
 
@@ -67,19 +76,28 @@ def register():
 
         if hashed_pwd1 == hashed_pwd2:
             try:
-                user = User(email=email, name=name, dob=dob,
-                            pswd=hashed_pwd1, timestamp=datetime.now())
+                user = User(email=email, name=name,
+                            pswd=hashed_pwd1, dob=dob, timestamp=datetime.now())
+
                 db.add(user)
             except:
                 return render_template("index.html", name="Something went wrong. Please Try Again.")
             db.commit()
-            return render_template("index.html", name="You are now a menber of Books Ville. Please log in to continue.")
+            return render_template("index.html", name="You are now a member of Books Ville. Please log in to continue.")
+        else:
+            return render_template("index.html", name="Passwords mismatch please register again")
 
 
 @app.route("/logout")
 def logout():
     session.clear()
     return redirect(url_for('index'))
+
+
+@app.route("/admin", methods=["GET"])
+def admin():
+    users = db.query(User).order_by(desc(User.timestamp))
+    return render_template("admin.html", users=users)
 
 
 @app.route("/details", methods=["POST"])
