@@ -22,4 +22,25 @@ body header div#logout {
   color: #023e81;
   text-align: right;
 }
+
+body header a {
+  color: #023e81;
+}
+
+body header th, body header td {
+  text-align: center;
+}
+
+body tr :hover {
+  font-weight: bold;
+}
+
+body .wd {
+  width: 150px;
+  margin: auto;
+  display: block;
+  background-color: #212529;
+  color: #ccc;
+  border-radius: 5px;
+}
 /*# sourceMappingURL=results.css.map */

@@ -20,6 +20,30 @@ body {
             color: #023e81;
             text-align: right;
         }
+        a {
+            color: #023e81;
+          }
+         th,td{
+        text-align: center;
+         }
+
+}
+tr {
+    :hover {
+            font-weight: bold;
+        }
+    }
+
+    .wd{
+        width: 150px;
+        margin:auto;
+        display:block;
+        background-color: #212529;
+        color: #ccc;
+        border-radius: 5px;
+
 
     }
+
+
 }
