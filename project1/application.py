@@ -50,7 +50,8 @@ def auth():
         if((uname == users.email) and (hashed_pwd == users.pswd)):
             session['data'] = uname
             # msg = "Hi "+users.name+", Welcome to Books Ville\nFind your favorite book here"
-            return redirect(url_for('search'))
+            return render_template("details.html")
+            # return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
         else:
             return render_template('index.html', name="Incorrect Credentials. Please try again.")
     return render_template("index.html", name="You are not registered. Please click on Register Here.")
@@ -119,37 +120,42 @@ def details():
     return render_template('details.html', name=name)
 
 
-@app.route("/search", methods=["GET"])
+@app.route("/search", methods=["GET", "POST"])
 def search():
-    return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
-
-
-@app.route("/test", methods=["POST"])
-def test():
-    s = ""
-    select = request.form.get('comp')
-    req = request.form.get('search')
-    like_format = '%{}%'.format(req)
-    if req == "":
-        return render_template("search.html", msg="Search query cannot be empty")
-    else:
-        if select == "ISBN":
-            stat = db.query(Book).filter(Book.isbn.like(like_format)).all()
-            print("asdfs")
-            print(type(stat))
-        elif select == "Title":
-            stat = db.query(Book).filter(Book.title.like(like_format)).all()
-        elif select == "Author":
-            stat = db.query(Book).filter(Book.author.like(like_format)).all()
+    if request.method == "GET":
+        return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+    elif request.method == "POST":
+        s = ""
+        select = request.form.get('comp')
+        req = request.form.get('search')
+        like_format = '%{}%'.format(req)
+        if req == "":
+            return render_template("search.html", msg="Search query cannot be empty")
         else:
-            stat = db.query(Book).filter(Book.year.like(like_format)).all()
+            if select == "ISBN":
+                stat = db.query(Book).filter(Book.isbn.like(
+                    like_format)).order_by(Book.title).all()
+            elif select == "Title":
+                stat = db.query(Book).filter(
+                    Book.title.like(like_format)).order_by(Book.title).all()
+            elif select == "Author":
+                stat = db.query(Book).filter(
+                    Book.author.like(like_format)).order_by(Book.title).all()
+            else:
+                stat = db.query(Book).filter(Book.year.like(
+                    like_format)).order_by(Book.title).all()
+                # db.query(Book).order_by(desc(User.time))
+            # stat=sorted(stat,)
+            if len(stat) == 0:
+                return render_template("noresult.html")
+            else:
+                return render_template("results.html", stat=stat)
 
-        if len(stat) == 0:
-            return ("sorry")
-        else:
-            return render_template("results.html", stat=stat)
+
+# @app.route("/test", methods=["POST"])
+# def test():
 
 
 @app.route("/book/<string:isbn>")
 def bookdetails(isbn):
-    return render_template("manu.html", isbn=isbn)
+    return render_template("isbnvar.html", isbn=isbn)
