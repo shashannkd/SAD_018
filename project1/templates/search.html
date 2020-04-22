@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" -->
+    <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/search.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
+    <title>Admin Books Ville</title>
+</head>
+
+<body>
+    <header>
+        <div id="logout">
+            <a href="{{url_for('logout')}}" title="Log Out">
+                <svg class="bi bi-power" width="1.5em" height="2em" viewBox="0 0 16 16" fill="black"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 104.922.044l.5-.866a6 6 0 11-5.908-.053l.486.875z"
+                        clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+        <div id="title">
+            <a href="{{ url_for('details')}}" title="Go to Home">Books Ville</a>
+        </div>
+        <form class="form-inline" method="POST" action="{{ url_for('test') }}">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">Field</span>
+                    <select name="comp" class="selectpicker form-control">
+                        {% for o in data %}
+                        <option value="{{ o.field }}">{{ o.field }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- <button type="submit" class="btn btn-default">Go</button> -->
+                <!-- <input type="text" placeholder="Search.." name="query"> -->
+                <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+            </div>
+            <!-- <br><br> -->
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </form>
+        <!-- <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Field
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">ISBN</a></li>
+                <li><a href="#">Title</a></li>
+                <li><a href="#">Author</a></li>
+                <li><a href="#">Year</a></li>
+            </ul>
+        </div> -->
+
+    </header>
+
+</body>
+
+</html>

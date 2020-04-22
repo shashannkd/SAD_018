@@ -5,7 +5,7 @@ from flask_session import Session
 from sqlalchemy import create_engine, desc
 from sqlalchemy.orm import scoped_session, sessionmaker
 from flask import Flask, render_template, request, redirect, url_for
-from models import User
+from models import User, Book
 from datetime import datetime
 import logging
 
@@ -116,3 +116,27 @@ def admin():
 def details():
     name = request.form.get('name')
     return render_template('details.html', name=name)
+
+
+@app.route("/search")
+def search():
+    return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+
+
+@app.route("/test", methods=["POST"])
+def test():
+    s = ""
+    select = request.form.get('comp')
+    req = request.form.get('search')
+    if select == "ISBN":
+        stat = db.query(Book).filter(Book.isbn == req).all()
+        print("asdfs")
+        print(type(stat))
+    elif select == "Title":
+        stat = db.query(Book).filter(Book.title == req).all()
+    elif select == "Author":
+        stat = db.query(Book).filter(Book.author == req).all()
+    else:
+        stat = db.query(Book).filter(Book.year == req).all()
+    val = ','.join(map(str, stat))
+    return val

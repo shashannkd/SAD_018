@@ -291,3 +291,280 @@ INFO:werkzeug:127.0.0.1 - - [21/Apr/2020 22:46:57] "POST /register HTTP/1.1" 200
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2020 22:46:57] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2020 22:48:05] "POST /register HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2020 22:48:05] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:36:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:36:50] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:36:50] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:36:50] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:37:13] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:37:13] "GET /static/css/register.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:38:09] "POST /register HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:38:10] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:38:10] "GET /register?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:38:10] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:38:10] "GET /register?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:38:11] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:38:11] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:39:11] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:39:36] "POST /register HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:39:36] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:39:37] "GET /register?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:39:37] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:39:37] "GET /register?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:39:37] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:39:37] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:42:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:43:07] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:43:44] "POST /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:43:54] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:43:54] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:46:02] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:48:12] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:48:12] "GET /static/css/admin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:53:00] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:53:02] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:56:36] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:56:37] "GET /static/css/search.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:57:30] "GET /static/css/search.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:57:35] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:57:35] "GET /static/css/search.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:57:35] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:57:51] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:57:51] "GET /static/css/search.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:58:28] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:58:29] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:58:29] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 11:58:29] "GET /static/css/search.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:06:10] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:09:22] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:10:11] "GET /details HTTP/1.1" 405 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:10:11] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:14:49] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:15:30] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:26:31] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:28:59] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:28:59] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:28:59] "GET /amin HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:28:59] "GET /static/css/admin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:29:13] "GET /details HTTP/1.1" 405 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:29:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:29:32] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:29:43] "GET /static/css/details.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:32:42] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:32:42] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:32:42] "GET /static/css/admin.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:33:40] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:33:53] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:33:53] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:34:03] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:34:03] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:34:04] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:34:04] "GET /static/css/search.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:53:03] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:54:18] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:54:29] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:54:29] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:54:36] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:54:36] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:54:36] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:54:36] "GET /static/css/search.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:55:28] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:57:01] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:58:00] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 12:58:03] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 13:54:51] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 13:54:54] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 13:55:05] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 13:55:50] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 13:56:31] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:03:36] "GET /details HTTP/1.1" 405 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:06:59] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:07:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:07:58] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:08:10] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:08:20] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:08:20] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:08:31] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:08:31] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:08:32] "GET /static/css/search.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:09:08] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:09:43] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:09:50] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:10:00] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:10:05] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:21:36] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:21:42] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:36:13] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:36:13] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:36:13] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:36:13] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:36:13] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:36:13] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:36:13] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:37:13] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:37:13] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:37:13] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:37:13] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:37:14] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:37:14] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:39:22] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:39:22] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:39:22] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:39:22] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:39:22] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:39:22] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:15] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:15] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:15] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:15] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:16] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:16] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:45] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:49] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:49] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:49] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:49] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:49] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:40:49] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:44:25] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:44:26] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:44:26] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:44:26] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:44:26] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:44:26] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:20] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:21] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:29] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:33] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:33] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:33] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:33] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:33] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:45:33] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:46:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:46:20] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:46:25] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:46:25] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:46:25] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:46:25] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:46:25] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:46:25] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:47:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:47:35] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:47:40] "POST /test HTTP/1.1" 405 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:10] "GET /search HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:10] "GET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:10] "GET /search?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:10] "GET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:10] "GET /search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:10] "GET /search?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:10] "GET /search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:32] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:35] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:39] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:41] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:41] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:41] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:41] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:41] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:41] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:48:41] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:50:21] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:50:21] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:50:21] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:50:21] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:50:21] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:50:21] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:51:48] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:51:48] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:51:48] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:51:48] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:51:49] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:51:49] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:34] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:34] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:34] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:34] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:34] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:34] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:59] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:59] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:59] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:59] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:59] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:53:59] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 14:54:22] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:07:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:03] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:06] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:06] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:06] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:06] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:07] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:07] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:07] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:55] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:08:59] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:09:22] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:09:26] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:11:19] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:11:29] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:12:09] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:12:09] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:12:09] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:12:09] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:12:09] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:12:09] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:12:09] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:13:50] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 15:13:59] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:33:46] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:33:56] "POST /test HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:33:56] "GET /test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:33:56] "GET /test?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:33:56] "GET /test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:33:56] "GET /test?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:33:56] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:33:56] "GET /test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\chint\\Documents\\SAD_2019501005\\SAD_2019501005\\project1_shashannk\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:36:25] "POST /test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 17:37:09] "POST /test HTTP/1.1" 200 -

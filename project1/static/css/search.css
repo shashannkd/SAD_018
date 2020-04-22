@@ -1,0 +1,25 @@
+body {
+  margin: 10px;
+  background-color: #c9c9c7;
+  background-size: cover;
+}
+
+body header div#title {
+  text-align: center;
+  padding: 40px;
+}
+
+body header div#title a {
+  font-size: 60px;
+  font-weight: 700;
+  color: #023e81;
+  text-decoration: none;
+}
+
+body header div#logout {
+  font-size: 20px;
+  font-weight: 500;
+  color: #023e81;
+  text-align: right;
+}
+/*# sourceMappingURL=search.css.map */

@@ -1,22 +1,30 @@
-import os
 import csv
-from models import Book
+import os
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
-
+from models import Book
 
 engine = create_engine(os.getenv("DATABASE_URL"))
-db_session = scoped_session(sessionmaker(bind=engine))
-db = db_session()
+database = scoped_session(sessionmaker(bind=engine))
+db = database()
 
 
-with open("books.csv", 'r') as books_file:
-    books = csv.reader(books_file, delimiter=",")
-    header = next(books)
-    if header != None:
-        for ISBN, title, author, year in books:
-            book = Book(isbn=ISBN, title=title, author=author, year=year)
-            print(book.title)
-            db.add(book)
-db.commit()
+def main():
+    f = open("books.csv")
+    reader = csv.reader(f)
+    i = 0
+
+    for isbn, title, author, year in reader:
+        if i != 0:
+            db.execute("INSERT INTO books (isbn, title, author, year) VALUES (:isbn, :title, :author, :year)",
+                       {"isbn": isbn, "title": title, "author": author, "year": year})
+            print(f"Added {isbn} ,{title} , {author},{year} row")
+        i = i+1
+    db.commit()
+
+
 db.close()
+
+if __name__ == '__main__':
+    main()
