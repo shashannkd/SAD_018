@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/styles.css">
+        <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
+
+        <title>Login to Books Ville</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="title">
+                <a href="{{ url_for('index') }}" title="Go to Home">Books Ville</a>
+            </div>
+        </header>
+        <div id="loginform">
+            <form class="form text-center" action="{{url_for('auth')}}" method="POST">
+                <h3>{{ name }}</h3>
+                <div class="textinputs">
+                    <!-- <label for="uname">Username </label> -->
+                    <input type="email" name='email' id="uname" placeholder="Enter Your Email" class="textinputs"
+                        required>
+                </div>
+
+                <div class="textinputs">
+                    <!-- <label for="password">Password </label> -->
+                    <input type="password" name='password' id="password" placeholder="Enter Your Password"
+                        class="textinputs" required>
+                </div>
+                <button class="btn btn-dark" type="submit">Log In</button>
+                <p>New to Books Ville? <a href="{{url_for('register')}}">Register Here</a></p>
+            </form>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,62 @@
+$title-size: 40px;
+$tenpx: 10px;
+
+body {
+    margin: $tenpx;
+    background-image: url("./images/one.jpg");
+    background-size: cover;
+    header {
+        div#title {
+            text-align: center;
+            padding: $title-size;
+            a {
+                font-size: 60px;
+                font-weight: 700;
+                color: #023e81;
+                text-decoration: none;
+            }
+        }
+    }
+
+    form {
+        h3 {
+            margin: $tenpx;
+        }
+        div.textinputs {
+            margin: $tenpx auto;
+            display: block;
+            label {
+                font-weight: bold;
+            }
+            input {
+                padding: $tenpx;
+                border: 1px solid #555;
+                border-radius: 5px;
+                box-sizing: border-box;
+                border: none;
+                border-bottom: 2px solid black;
+                width: 300px;
+                &:focus {
+                    background-color: #111;
+                    color: #ccc;
+                }
+            }
+        }
+        button {
+            padding: $tenpx 32px;
+            border-radius: 5px;
+            background-color: #023e81;
+            border-color: #023e81;
+            color: #eee;
+            overflow: hidden;
+            text-decoration: none;
+            margin: $tenpx 0 $tenpx $tenpx;
+            cursor: pointer;
+        }
+        p {
+            margin: $tenpx;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}

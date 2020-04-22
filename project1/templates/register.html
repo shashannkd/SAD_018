@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/register.css">
+        <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
+        <title>Register Here</title>
+
+    </head>
+
+    <body>
+        <header>
+            <div id="title">
+                <a href="{{ url_for('index') }}" title="Go to Home">Books Ville</a>
+                <p>{{message}}</p>
+            </div>
+        </header>
+        <div id="regform">
+            <h3>New to Books Ville?</h3>
+            <h5> Register Here. It's quick.</h5>
+            <form action="{{ url_for('register') }}" method="POST">
+                <div id="formcontents">
+                    <b>Name:</b> <input type="text" name='name' placeholder="Enter Your Name" class="textinputs"
+                        required>
+                    <b>E-mail:</b> <input type="email" name='email' placeholder="Enter Your Email" class="textinputs"
+                        required>
+
+                    <b>Password:</b> <input type="password" name='password' placeholder="Enter Your Password"
+                        class="textinputs" required>
+                    <b>Confirm Password:</b> <input type="password" name='password2'
+                        placeholder="Re-enter Your Password" class="textinputs" required>
+                    <div id="gender">
+                        <label for="gender" style="font-weight: bold;">Gender: </label>
+                        <select id="gender">
+                            <option value="gender">Male</option>
+                            <option value="gender">Female</option>
+                            <option value="gender">Other</option>
+                        </select>
+                    </div>
+                    <div id="dob">
+                        <b>DOB: </b>
+                        <input type="date" name="dob">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="submit">Sign Up</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+
+    </body>
+
+</html>
