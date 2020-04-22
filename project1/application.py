@@ -49,7 +49,8 @@ def auth():
     if users is not None:
         if((uname == users.email) and (hashed_pwd == users.pswd)):
             session['data'] = uname
-            return render_template("details.html", name=users.name.capitalize())
+            # msg = "Hi "+users.name+", Welcome to Books Ville\nFind your favorite book here"
+            return redirect(url_for('search'))
         else:
             return render_template('index.html', name="Incorrect Credentials. Please try again.")
     return render_template("index.html", name="You are not registered. Please click on Register Here.")
@@ -118,7 +119,7 @@ def details():
     return render_template('details.html', name=name)
 
 
-@app.route("/search")
+@app.route("/search", methods=["GET"])
 def search():
     return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
 
@@ -128,15 +129,27 @@ def test():
     s = ""
     select = request.form.get('comp')
     req = request.form.get('search')
-    if select == "ISBN":
-        stat = db.query(Book).filter(Book.isbn == req).all()
-        print("asdfs")
-        print(type(stat))
-    elif select == "Title":
-        stat = db.query(Book).filter(Book.title == req).all()
-    elif select == "Author":
-        stat = db.query(Book).filter(Book.author == req).all()
+    like_format = '%{}%'.format(req)
+    if req == "":
+        return render_template("search.html", msg="Search query cannot be empty")
     else:
-        stat = db.query(Book).filter(Book.year == req).all()
-    val = ','.join(map(str, stat))
-    return val
+        if select == "ISBN":
+            stat = db.query(Book).filter(Book.isbn.like(like_format)).all()
+            print("asdfs")
+            print(type(stat))
+        elif select == "Title":
+            stat = db.query(Book).filter(Book.title.like(like_format)).all()
+        elif select == "Author":
+            stat = db.query(Book).filter(Book.author.like(like_format)).all()
+        else:
+            stat = db.query(Book).filter(Book.year.like(like_format)).all()
+
+        if len(stat) == 0:
+            return ("sorry")
+        else:
+            return render_template("results.html", stat=stat)
+
+
+@app.route("/book/<string:isbn>")
+def bookdetails(isbn):
+    return render_template("manu.html", isbn=isbn)

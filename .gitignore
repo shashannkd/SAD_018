@@ -10,3 +10,6 @@ authentication/__pycache__/application.cpython-38.pyc
 authentication/__pycache__/models.cpython-38.pyc
 authentication/flask_session/61d59ef13abe7416c1f1310060b14f8f
 authentication/flask_session/2029240f6d1128be89ddc32729463129
+project1/static/css/results.css.map
+project1/static/css/search.css.map
+project1/__pycache__/application.cpython-37.pyc

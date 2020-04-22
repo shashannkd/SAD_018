@@ -1,6 +1,6 @@
 body {
   margin: 10px;
-  background-image: url("./images/one.jpg");
+  background-color: #c9c9c7;
   background-size: cover;
 }
 
@@ -22,4 +22,4 @@ body header div#logout {
   color: #023e81;
   text-align: right;
 }
-/*# sourceMappingURL=search.css.map */
+/*# sourceMappingURL=results.css.map */

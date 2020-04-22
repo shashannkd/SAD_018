@@ -29,7 +29,8 @@
         <div id="title">
             <a href="{{ url_for('details')}}" title="Go to Home">Books Ville</a>
         </div>
-        <form class="form-inline" method="POST" action="{{ url_for('test') }}">
+        <h3>{{msg}}</h3>
+        <form class="form-inline" style="margin: 0 auto;" method="POST" action="{{ url_for('test') }}">
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon">Field</span>
@@ -39,11 +40,7 @@
                         {% endfor %}
                     </select>
                 </div>
-                <!-- <button type="submit" class="btn btn-default">Go</button> -->
-                <!-- <input type="text" placeholder="Search.." name="query"> -->
-                <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
             </div>
-            <!-- <br><br> -->
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search" name="search">
                 <div class="input-group-btn">
@@ -51,17 +48,6 @@
                 </div>
             </div>
         </form>
-        <!-- <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Field
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">ISBN</a></li>
-                <li><a href="#">Title</a></li>
-                <li><a href="#">Author</a></li>
-                <li><a href="#">Year</a></li>
-            </ul>
-        </div> -->
-
     </header>
 
 </body>
