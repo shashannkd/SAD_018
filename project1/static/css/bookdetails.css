@@ -34,7 +34,7 @@ body div#book-details div#book-img img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 5px solid black;
-  width: 380px;
+  width: 300px;
 }
 
 body div#book-details div#book-metadata ul {

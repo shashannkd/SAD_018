@@ -124,7 +124,10 @@ def details():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     if request.method == "GET":
-        return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+        if session.get('data') is not None:
+            return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+        else:
+            return redirect(url_for('index'))
     elif request.method == "POST":
         s = ""
         select = request.form.get('comp')
@@ -179,8 +182,4 @@ def bookdetails(isbn):
 
         return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'])
     else:
-        return redirect(url_for('index'))
-        abort(401)
-
-# @app.errorhandler(401)
-# def baduser():
+        redirect(url_for('search'))
