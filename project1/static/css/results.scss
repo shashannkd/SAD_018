@@ -1,0 +1,51 @@
+$title-size: 40px;
+body {
+    margin: 10px;
+    background-color: #c9c9c7;
+    background-size: cover;
+    header {
+        div#title {
+            text-align: center;
+            padding: $title-size;
+            a {
+                font-size: 60px;
+                font-weight: 700;
+                color: #023e81;
+                text-decoration: none;
+            }
+        }
+            div#logout {
+            font-size: 20px;
+            font-weight: 500;
+            color: #023e81;
+            text-align: right;
+        }
+        a {
+            color: #023e81;
+          }
+         th,td{
+        text-align: center;
+         }
+
+}
+tr {
+    :hover {
+            font-weight: bold;
+        }
+    }
+
+    // div#search-again{
+    //     width: 150px;
+    //     padding: 10px;
+    //     display:block;
+    //     background-color: #212529;
+    //     color: #ccc;
+    //     border-radius: 5px;
+    //     float: right;
+    //     button{
+    //         margin-right: 63px;
+    //     }
+    // }
+
+
+}
