@@ -3,4 +3,47 @@ body {
   background-image: url("./images/one.jpg");
   background-size: cover;
 }
+
+body header div#title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+body header div#title a {
+  font-size: 60px;
+  font-weight: 700;
+  color: #023e81;
+  text-decoration: none;
+}
+
+body header div#logout {
+  font-size: 20px;
+  font-weight: 500;
+  color: #023e81;
+  text-align: right;
+}
+
+body div#book-details {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0 0 0 220px;
+}
+
+body div#book-details div#book-img img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 5px solid black;
+  width: 380px;
+}
+
+body div#book-details div#book-metadata ul {
+  margin: 20px 0 0 0;
+}
+
+body div#book-details div#book-metadata ul li#detail-item {
+  color: black;
+  font-weight: 500;
+  display: block;
+}
 /*# sourceMappingURL=bookdetails.css.map */
