@@ -709,3 +709,222 @@ INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 19:45:48] "GET /static/css/images/favic
 INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 19:47:21] "GET /search HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 19:47:25] "GET /static/css/search.css.map HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [22/Apr/2020 19:47:52] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:35:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:35:57] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:35:57] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:36:17] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:36:18] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:36:20] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:36:20] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:36:30] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:36:30] "GET /static/css/results.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.goodreads.com:443
+DEBUG:urllib3.connectionpool:https://www.goodreads.com:443 "GET /book/review_counts.json?key=xrbVRghYTBzy5MCO84zHg&isbns=0316129070 HTTP/1.1" 200 None
+DEBUG:root:{'title': "Abaddon's Gate", 'author': 'James S.A. Corey', 'year': '2013', 'isbn': '0316129070', 'review_count': 83977, 'average_score': '4.24'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:36:37] "GET /book/0316129070 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:36:38] "GET /static/css/bookdetails.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.goodreads.com:443
+DEBUG:urllib3.connectionpool:https://www.goodreads.com:443 "GET /book/review_counts.json?key=xrbVRghYTBzy5MCO84zHg&isbns=0312537409 HTTP/1.1" 200 None
+DEBUG:root:{'title': 'Abandon', 'author': 'Blake Crouch', 'year': '2009', 'isbn': '0312537409', 'review_count': 15150, 'average_score': '3.74'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:37:07] "GET /book/0312537409 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:37:35] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:37:39] "POST /search HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.goodreads.com:443
+DEBUG:urllib3.connectionpool:https://www.goodreads.com:443 "GET /book/review_counts.json?key=xrbVRghYTBzy5MCO84zHg&isbns=0316129070 HTTP/1.1" 200 None
+DEBUG:root:{'title': "Abaddon's Gate", 'author': 'James S.A. Corey', 'year': '2013', 'isbn': '0316129070', 'review_count': 83977, 'average_score': '4.24'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:37:42] "GET /book/0316129070 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:38:45] "GET /details HTTP/1.1" 405 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:38:54] "GET /details HTTP/1.1" 405 -
+ERROR:root:{'title': "Abaddon's Gate", 'author': 'James S.A. Corey', 'year': '2013', 'isbn': '0316129070', 'review_count': 83977, 'average_score': '4.24'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:40:04] "GET /book/0316129070 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:40:05] "GET /static/css/bookdetails.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:40:11] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:40:11] "GET /static/css/search.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:40:29] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:40:30] "GET /static/css/details.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:41:32] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:41:38] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'A Dangerous Path', 'author': 'Erin Hunter', 'year': '2004', 'isbn': '0060525657', 'review_count': 47232, 'average_score': '4.44'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:41:43] "GET /book/0060525657 HTTP/1.1" 200 -
+ERROR:root:{'title': 'A Dangerous Path', 'author': 'Erin Hunter', 'year': '2004', 'isbn': '0060525657', 'review_count': 47232, 'average_score': '4.44'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:42:57] "GET /book/0060525657 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:43:02] "GET /logout HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:43:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:43:05] "GET /book/0060525657 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:43:08] "GET /book/0060525657 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:43:10] "GET /book/0060525657 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:43:12] "GET /logout HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:43:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:43:17] "GET /book/0060525657 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:48:30] "GET /logout HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:48:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:49:36] "GET /book/074349671X HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:49:44] "GET /book/0375913750 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:51:39] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:51:41] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:51:53] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:51:54] "GET /book/0375913750 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:53:14] "GET /book/0375913750 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:53:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 12:53:27] "GET /book/0375913750 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:13:59] "GET /book/0375913750 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:14:03] "GET /logout HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:14:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:14:16] "GET /api/book/9781632168146 HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:14:27] "GET /book/9781632168146 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:14:35] "GET /logout HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:14:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:16:36] "GET /book/0375913750 HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:16:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:17:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:18:05] "GET /book/0375913750 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:18:05] "GET /book/0375913750?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:18:05] "GET /book/0375913750?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:18:05] "GET /book/0375913750?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:18:05] "GET /book/0375913750?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:18:05] "GET /book/0375913750?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:18:05] "GET /book/0375913750?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:23:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:23:09] "GET /book/0375913750 HTTP/1.1" 401 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:27:40] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:28:15] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:28:28] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:28:31] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:29:01] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:30:13] "GET /logout HTTP/1.1" 302 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:30:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:30:35] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:30:53] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:42:33] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:42:46] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:42:47] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:42:52] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:42:54] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:43:04] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:43:15] "GET /book/0316129070 HTTP/1.1" 302 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:43:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:43:31] "GET /book/0316129070 HTTP/1.1" 302 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:43:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\MSIT\\IT\\Software App Development\\Assignments\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:44:05] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:44:07] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:44:13] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Abaddon's Gate", 'author': 'James S.A. Corey', 'year': '2013', 'isbn': '0316129070', 'review_count': 83980, 'average_score': '4.24'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:44:17] "GET /book/0316129070 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Abandon', 'author': 'Blake Crouch', 'year': '2009', 'isbn': '0312537409', 'review_count': 15150, 'average_score': '3.74'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:44:28] "GET /book/0312537409 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Abandon', 'author': 'Blake Crouch', 'year': '2009', 'isbn': '0312537409', 'review_count': 15150, 'average_score': '3.74'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:45:20] "GET /book/0312537409 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:45:20] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:45:24] "GET /static/css/bookdetails.scss HTTP/1.1" 200 -
+ERROR:root:{'title': 'Abandon', 'author': 'Blake Crouch', 'year': '2009', 'isbn': '0312537409', 'review_count': 15150, 'average_score': '3.74'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:45:37] "GET /book/0312537409 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:45:37] "GET /static/css/bookdetails.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:45:38] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:45:38] "GET /static/css/bookdetails.css.map HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:10] "GET /book/0312537409 HTTP/1.1" 401 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:15] "GET /book/0060525657 HTTP/1.1" 401 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:18] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:18] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:26] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:26] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:28] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:28] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:44] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:45] "GET /static/css/results.css HTTP/1.1" 200 -
+ERROR:root:{'title': 'Abandon', 'author': 'Blake Crouch', 'year': '2009', 'isbn': '0312537409', 'review_count': 15150, 'average_score': '3.74'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:54] "GET /book/0312537409 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:46:55] "GET /static/css/bookdetails.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:10] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:14] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:15] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Abaddon's Gate", 'author': 'James S.A. Corey', 'year': '2013', 'isbn': '0316129070', 'review_count': 83980, 'average_score': '4.24'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:19] "GET /book/0316129070 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Abandon', 'author': 'Blake Crouch', 'year': '2009', 'isbn': '0312537409', 'review_count': 15150, 'average_score': '3.74'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:24] "GET /book/0312537409 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:35] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:35] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:35] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:40] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:40] "GET /static/css/results.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:41] "GET /book/0316129070 HTTP/1.1" 401 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:45] "GET /logout HTTP/1.1" 302 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:45] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:53] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:53] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:55] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:48:59] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Abaddon's Gate", 'author': 'James S.A. Corey', 'year': '2013', 'isbn': '0316129070', 'review_count': 83980, 'average_score': '4.24'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:49:08] "GET /book/0316129070 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:49:08] "GET /static/css/bookdetails.css HTTP/1.1" 200 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:58:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:59:06] "GET /book/0316129070 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:59:06] "GET /book/0316129070?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:59:06] "GET /book/0316129070?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:59:06] "GET /book/0316129070?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:59:06] "GET /book/0316129070?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:59:06] "GET /book/0316129070?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 13:59:06] "GET /book/0316129070?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:00:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:00:53] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:00:55] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:00:59] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Abaddon's Gate", 'author': 'James S.A. Corey', 'year': '2013', 'isbn': '0316129070', 'review_count': 83981, 'average_score': '4.24'}
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:01:03] "GET /book/0316129070 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:01:45] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:01:57] "POST /search HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:02:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:02:31] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:02:39] "GET /details HTTP/1.1" 405 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:23] "GET /details HTTP/1.1" 405 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:33] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:33] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:47] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:48] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:51] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:51] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:07:51] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:07:51] "GET /static/css/results.css HTTP/1.1" 200 -

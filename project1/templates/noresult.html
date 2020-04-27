@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/details.css">
-    <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/details.css">
+        <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
 
-    <title>Home</title>
-</head>
+        <title>Home</title>
+    </head>
 
-<body>
-    <header>
-        <div id="logout">
-            <a href="{{url_for('logout')}}" title="Log Out">
-                <svg class="bi bi-power" width="1.5em" height="2em" viewBox="0 0 16 16" fill="black"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 104.922.044l.5-.866a6 6 0 11-5.908-.053l.486.875z"
-                        clip-rule="evenodd" />
-                    <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" clip-rule="evenodd" />
-                </svg>
-            </a>
-        </div>
-        <div id="title">
-            <a href="{{ url_for('details')}}" title="Go to Home">Books Ville</a>
-        </div>
+    <body>
+        <header>
+            <div id="logout">
+                <a href="{{url_for('logout')}}" title="Log Out">
+                    <svg class="bi bi-power" width="1.5em" height="2em" viewBox="0 0 16 16" fill="black"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M5.578 4.437a5 5 0 104.922.044l.5-.866a6 6 0 11-5.908-.053l.486.875z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            <div id="title">
+                <a href="{{ url_for('details')}}" title="Go to Home">Books Ville</a>
+            </div>
 
-    </header>
-    <h2>Sorry!No books matching your search.</h2>
-    <h2>Try again<a href="{{url_for('search')}}">here.</a></h2>
-</body>
+        </header>
+        <h2>Sorry! No books matching your search.</h2>
+        <h2>Try again <a href="{{url_for('search')}}">here.</a></h2>
+    </body>
 
 </html>

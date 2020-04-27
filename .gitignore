@@ -13,3 +13,12 @@ authentication/flask_session/2029240f6d1128be89ddc32729463129
 project1/static/css/results.css.map
 project1/static/css/search.css.map
 project1/__pycache__/application.cpython-37.pyc
+project1/static/css/admin.css.map
+project1/static/css/bookdetails.css.map
+project1/static/css/details.css.map
+project1/static/css/register.css.map
+project1/static/css/search.css.map
+project1/static/css/styles.css.map
+project1/static/css/register.css.map
+
+project1/log.log

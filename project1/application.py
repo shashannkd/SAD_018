@@ -1,10 +1,12 @@
+import json
+import requests
 import os
 import hashlib
 from flask import session
 from flask_session import Session
 from sqlalchemy import create_engine, desc
 from sqlalchemy.orm import scoped_session, sessionmaker
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, abort
 from models import User, Book
 from datetime import datetime
 import logging
@@ -20,7 +22,7 @@ if not os.getenv("DATABASE_URL"):
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
-logging.basicConfig(filename='log.log', level=logging.DEBUG)
+logging.basicConfig(filename='log.log', level=logging.ERROR)
 
 
 # Set up database
@@ -33,6 +35,7 @@ db = db_session()
 def index():
     # name = "Welcome to Books Ville. Please continue to login."
     if request.method == "GET":
+        logging.error(session.get('data'))
         if session.get('data') is not None:
             return render_template("details.html", name=session.get('data'))
     return render_template("index.html")
@@ -49,9 +52,7 @@ def auth():
     if users is not None:
         if((uname == users.email) and (hashed_pwd == users.pswd)):
             session['data'] = uname
-            # msg = "Hi "+users.name+", Welcome to Books Ville\nFind your favorite book here"
             return render_template("details.html")
-            # return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
         else:
             return render_template('index.html', name="Incorrect Credentials. Please try again.")
     return render_template("index.html", name="You are not registered. Please click on Register Here.")
@@ -123,7 +124,10 @@ def details():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     if request.method == "GET":
-        return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+        if session.get('data') is not None:
+            return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+        else:
+            return redirect(url_for('index'))
     elif request.method == "POST":
         s = ""
         select = request.form.get('comp')
@@ -152,10 +156,30 @@ def search():
                 return render_template("results.html", stat=stat)
 
 
-# @app.route("/test", methods=["POST"])
-# def test():
-
-
-@app.route("/book/<string:isbn>")
+@app.route("/book/<string:isbn>", methods=["GET"])
 def bookdetails(isbn):
-    return render_template("isbnvar.html", isbn=isbn)
+    logging.debug(session.get('data'))
+    if session.get('data') is not None:
+        # DB call to get books data
+        result = db.execute(
+            "SELECT title, author, year FROM books WHERE isbn = :isbn", {"isbn": isbn}).fetchall()
+
+        # Using API key to get response from Good Reads API
+        KEY = "xrbVRghYTBzy5MCO84zHg"
+        res = requests.get("https://www.goodreads.com/book/review_counts.json",
+                           params={"key": KEY, "isbns": isbn})
+        book_details = res.json()
+
+        # Builiding a dictionary with required keys
+        keys = ['title', 'author', 'year', 'isbn',
+                'review_count', 'average_score']
+        values = [result[0][0], result[0][1], result[0][2], isbn, book_details['books']
+                  [0]['reviews_count'], book_details['books'][0]['average_rating']]
+        response = dict(zip(keys, values))
+
+        # logging the response dictionary
+        logging.error(response)
+
+        return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'])
+    else:
+        redirect(url_for('search'))
