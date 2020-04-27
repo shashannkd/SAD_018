@@ -186,7 +186,7 @@ def bookdetails(isbn):
             review_data.rating = rating
             review_data.review = review
             total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
-            response["average_score"] = str(total_rating)
+            response["average_score"] = str(round(total_rating,2))
             db.commit()
             existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
             return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'],average_rating=response['average_score'], rating=review_data.rating,review=review_data.review,details=existing_reviews, button_text = "Edit your review", msg = msg)

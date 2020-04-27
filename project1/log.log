@@ -928,3 +928,19 @@ INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:51] "GET /search HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:04:51] "GET /static/css/search.css HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:07:51] "POST /search HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [25/Apr/2020 14:07:51] "GET /static/css/results.css HTTP/1.1" 200 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:10:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:10:52] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:10:52] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:11:13] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:11:15] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:11:21] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'A Stranger in the Mirror', 'author': 'Sidney Sheldon', 'year': '1976', 'isbn': '0006471250', 'review_count': 27555, 'average_score': '3.63', 'rating_count': 17429}
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:11:27] "GET /book/0006471250 HTTP/1.1" 200 -
+ERROR:root:{'title': 'A Stranger in the Mirror', 'author': 'Sidney Sheldon', 'year': '1976', 'isbn': '0006471250', 'review_count': 27555, 'average_score': '3.63', 'rating_count': 17429}
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:11:41] "POST /book/0006471250 HTTP/1.1" 200 -
+ERROR:root:{'title': 'A Stranger in the Mirror', 'author': 'Sidney Sheldon', 'year': '1976', 'isbn': '0006471250', 'review_count': 27555, 'average_score': '3.63', 'rating_count': 17429}
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:12:00] "POST /book/0006471250 HTTP/1.1" 200 -
+ERROR:root:{'title': 'A Stranger in the Mirror', 'author': 'Sidney Sheldon', 'year': '1976', 'isbn': '0006471250', 'review_count': 27555, 'average_score': '3.63', 'rating_count': 17429}
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:12:24] "POST /book/0006471250 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
