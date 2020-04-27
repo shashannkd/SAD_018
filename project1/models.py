@@ -1,6 +1,6 @@
 import os
 import csv
-from sqlalchemy import Column, String, DateTime, create_engine
+from sqlalchemy import Column, String, Integer, DateTime, create_engine, ForeignKey, PrimaryKeyConstraint
 from sqlalchemy.ext.declarative import declarative_base
 
 db_base = declarative_base()
