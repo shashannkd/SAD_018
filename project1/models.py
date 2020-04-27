@@ -22,6 +22,14 @@ class User(db_base):
     dob = Column(String(15), nullable=False)
     timestamp = Column(DateTime(timezone=True), nullable=False)
 
+class Review(db_base):
+    __tablename__ = "user_reviews"
+    isbn = Column(String(30), ForeignKey('books.isbn'))
+    email = Column(String(30), ForeignKey('users.email'))
+    rating = Column(Integer, nullable=False, default = 0)
+    review = Column(String(150), nullable=False)
+    timestamp = Column(DateTime(timezone=True), nullable=False)
+    __table_args__ = (PrimaryKeyConstraint("isbn", "email"),)
 
 engine = create_engine(os.getenv("DATABASE_URL"))
 db_base.metadata.create_all(engine)
