@@ -183,3 +183,22 @@ def bookdetails(isbn):
         return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'])
     else:
         redirect(url_for('search'))
+
+def goodreads_api(isbn):
+    logging.debug(session.get('data'))
+    result = db.execute(
+                "SELECT title, author, year FROM books WHERE isbn = :isbn", {"isbn": isbn}).fetchall()
+            # Using API key to get response from Good Reads API
+    KEY = "xrbVRghYTBzy5MCO84zHg"
+    res = requests.get("https://www.goodreads.com/book/review_counts.json",
+                    params={"key": KEY, "isbns": isbn})
+    book_details = res.json()
+    print(book_details)
+    # Builiding a dictionary with required keys
+    keys = ['title', 'author', 'year', 'isbn',
+            'review_count', 'average_score', 'rating_count']
+    values = [result[0][0], result[0][1], result[0][2], isbn, book_details['books']
+            [0]['reviews_count'], book_details['books'][0]['average_rating'], book_details['books'][0]['ratings_count']]
+    response = dict(zip(keys, values))
+    logging.error(response)
+    return response
