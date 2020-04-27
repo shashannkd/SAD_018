@@ -22,3 +22,5 @@ project1/static/css/styles.css.map
 project1/static/css/register.css.map
 
 project1/log.log
+project1/__pycache__/models.cpython-37.pyc
+project1/flask_session/2029240f6d1128be89ddc32729463129
