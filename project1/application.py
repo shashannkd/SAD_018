@@ -63,12 +63,12 @@ def register():
     if request.method == 'GET':
         return render_template("register.html")
     elif request.method == 'POST':
-        session["data"] = []
+        # session["data"] = []
         name = request.form['name']
-        session["data"].append(name)
+        # session["data"].append(name)
 
         email = request.form['email']
-        session["data"].append(email.lower())
+        # session["data"].append(email.lower())
 
         is_user_present = db.execute("SELECT * FROM users WHERE email = :email",
                                      {"email": email}).fetchone()
@@ -78,14 +78,14 @@ def register():
 
         password = request.form['password']
         hashed_pwd1 = hashlib.md5(password.encode()).hexdigest()
-        session["data"].append(hashed_pwd1)
+        # session["data"].append(hashed_pwd1)
 
         password2 = request.form['password2']
         hashed_pwd2 = hashlib.md5(password2.encode()).hexdigest()
-        session["data"].append(hashed_pwd2)
+        # session["data"].append(hashed_pwd2)
 
         dob = request.form['dob']
-        session["data"].append(dob)
+        # session["data"].append(dob)
 
         if hashed_pwd1 == hashed_pwd2:
 
