@@ -151,18 +151,31 @@ def search():
                 return render_template("results.html", stat=stat)
 
 
-@app.route("/api/search", methods=["POST"])
+@app.route("/api/search", methods=["GET", "POST"])
 def api_search():
-    #     if request.method == "GET":
-    #         return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
-    #     else:
-    #         data = request.get_json()
-    #         try:
-    #             select = data["comp"]
-    #             req = data["search"]
-    #             print(str(select)+str(req))
-    #         except:
-    #             print("aszdxf")
+    if request.method == "GET":
+        return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+    else:
+        data = request.get_json()
+        select = data['comp']
+        req = data['search']
+        like_format = '%{}%'.format(req)
+        if select == "ISBN":
+            stat = db.query(Book).filter(Book.isbn.like(
+                like_format)).order_by(Book.title).all()
+        elif select == "Title":
+            stat = db.query(Book).filter(
+                Book.title.like(like_format)).order_by(Book.title).all()
+        elif select == "Author":
+            stat = db.query(Book).filter(
+                Book.author.like(like_format)).order_by(Book.title).all()
+        else:
+            stat = db.query(Book).filter(Book.year.like(
+                like_format)).order_by(Book.title).all()
+        if len(stat) == 0:
+            return render_template("noresult.html")
+        else:
+            return render_template("results.html", stat=stat)
 
 
 @app.route("/book/<string:isbn>")
