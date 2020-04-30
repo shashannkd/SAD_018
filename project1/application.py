@@ -177,6 +177,15 @@ def api_search():
         else:
             return render_template("results.html", stat=stat)
 
+        response = []
+        for row in stat:
+            dat = {}
+            dat["title"] = row.title
+            dat["isbn"] = row.isbn
+            dat["author"] = row.author
+            dat["year"] = row.year
+            response.append(dat)
+
 
 @app.route("/book/<string:isbn>")
 def bookdetails(isbn):
