@@ -4,13 +4,13 @@ from flask import session
 from flask_session import Session
 from sqlalchemy import create_engine, desc
 from sqlalchemy.orm import scoped_session, sessionmaker
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from models import User, Book
+# from flask_json import FLASK_JSON, JsonError, json_response, as_json
 from datetime import datetime
 import logging
 
 app = Flask(__name__)
-
 
 # # Check for environment variable
 if not os.getenv("DATABASE_URL"):
@@ -19,6 +19,7 @@ if not os.getenv("DATABASE_URL"):
 # Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+# FlaskJSON(app)
 Session(app)
 logging.basicConfig(filename='log.log', level=logging.DEBUG)
 
@@ -49,9 +50,7 @@ def auth():
     if users is not None:
         if((uname == users.email) and (hashed_pwd == users.pswd)):
             session['data'] = uname
-            # msg = "Hi "+users.name+", Welcome to Books Ville\nFind your favorite book here"
-            return render_template("details.html")
-            # return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+            return render_template("details.html", name=session['data'])
         else:
             return render_template('index.html', name="Incorrect Credentials. Please try again.")
     return render_template("index.html", name="You are not registered. Please click on Register Here.")
@@ -152,8 +151,18 @@ def search():
                 return render_template("results.html", stat=stat)
 
 
-# @app.route("/test", methods=["POST"])
-# def test():
+@app.route("/api/search", methods=["POST"])
+def api_search():
+    #     if request.method == "GET":
+    #         return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
+    #     else:
+    #         data = request.get_json()
+    #         try:
+    #             select = data["comp"]
+    #             req = data["search"]
+    #             print(str(select)+str(req))
+    #         except:
+    #             print("aszdxf")
 
 
 @app.route("/book/<string:isbn>")
