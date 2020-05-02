@@ -953,3 +953,198 @@ INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:13:16] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:13:19] "GET /logout HTTP/1.1" 302 -
 ERROR:root:None
 INFO:werkzeug:127.0.0.1 - - [27/Apr/2020 12:13:19] "GET / HTTP/1.1" 200 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:10] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:11] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:12] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:30] "POST /auth HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:30] "GET /auth?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:30] "GET /auth?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:30] "GET /auth?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:30] "GET /auth?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:30] "GET /auth?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:51:30] "GET /auth?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:16] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:16] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:20] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:20] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:27] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:27] "GET /static/css/results.css HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:35] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:35] "GET /static/css/bookdetails.css HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:52] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:55] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:56] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:56] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:56] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:57] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:57] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:57] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:57] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:58] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:58] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:58] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:52:59] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:53:53] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:53:53] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:54:02] "POST /api/review/0060744871 HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:55:47] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:55:47] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:55:56] "POST /api/review/0060744871 HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:58:09] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:58:10] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 17:58:17] "POST /api/review/0060744871 HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:03:18] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:03:21] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:03:28] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:04:25] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:04:27] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:04:27] "GET /static/css/bookdetails.css.map HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:04:52] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:07:26] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:07:26] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:07:34] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:09:21] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:09:21] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:09:35] "POST /api/review/0060744871 HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:15:20] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:15:22] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:15:29] "POST /api/review/0060744871 HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:23:27] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:23:28] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:23:36] "POST /book/0060744871 HTTP/1.1" 405 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:23:37] "GET /favicon.ico HTTP/1.1" 404 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:23] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:24] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:37] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:37] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:39] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:39] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:46] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:46] "GET /static/css/results.css HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:50] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:24:51] "GET /static/css/bookdetails.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:25:04] "GET /static/css/bookdetails.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:25:07] "POST /book/0060744871 HTTP/1.1" 405 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:25:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:25:42] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:25:57] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:26:01] "GET /book/0060744871 HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:26:11] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:27:11] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:27:11] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:27:19] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:28:38] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:28:38] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:28:46] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:29:32] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:29:33] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:29:41] "POST /api/review/0060744871 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:33:09] "POST /book/0060744871 HTTP/1.1" 405 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:33:19] "GET /book/0060744871 HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:33:29] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:34:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:34:07] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:34:19] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:34:23] "GET /book/0060744871 HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:34:41] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:36:55] "POST /api/review/0060744871 HTTP/1.1" 500 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38196, 'average_score': '4.20', 'rating_count': 21486}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:38:53] "GET /book/0060744871 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:38:55] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293336, 'average_score': '3.92', 'rating_count': 101748}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:39:10] "GET /book/1250077001 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293336, 'average_score': '3.92', 'rating_count': 101748}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:39:20] "POST /api/review/1250077001 HTTP/1.1" 500 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293336, 'average_score': '3.92', 'rating_count': 101748}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:39:26] "GET /book/1250077001 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 18:39:27] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:05:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:05:27] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:05:40] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293341, 'average_score': '3.92', 'rating_count': 101749}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:05:45] "GET /book/1250077001 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293341, 'average_score': '3.92', 'rating_count': 101749}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:06:02] "POST /api/review/1250077001 HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:07:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:07:06] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:07:19] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'Gone for Good', 'author': 'Harlan Coben', 'year': '2002', 'isbn': '0440236738', 'review_count': 57994, 'average_score': '4.10', 'rating_count': 36191}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:07:24] "GET /book/0440236738 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Gone for Good', 'author': 'Harlan Coben', 'year': '2002', 'isbn': '0440236738', 'review_count': 57994, 'average_score': '4.10', 'rating_count': 36191}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:07:35] "POST /api/review/0440236738 HTTP/1.1" 500 -
+ERROR:root:{'title': 'Gone for Good', 'author': 'Harlan Coben', 'year': '2002', 'isbn': '0440236738', 'review_count': 57994, 'average_score': '4.10', 'rating_count': 36191}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:08:33] "GET /book/0440236738 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:08:34] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'Good Grief', 'author': 'Lolly Winston', 'year': '2004', 'isbn': '0446694843', 'review_count': 40416, 'average_score': '3.73', 'rating_count': 25990}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:09:33] "GET /book/0446694843 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Good Grief', 'author': 'Lolly Winston', 'year': '2004', 'isbn': '0446694843', 'review_count': 40416, 'average_score': '3.73', 'rating_count': 25990}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:09:43] "POST /api/review/0446694843 HTTP/1.1" 500 -

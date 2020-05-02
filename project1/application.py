@@ -6,10 +6,11 @@ from flask import session
 from flask_session import Session
 from sqlalchemy import create_engine, desc, and_
 from sqlalchemy.orm import scoped_session, sessionmaker
-from flask import Flask, render_template, request, redirect, url_for, abort
+from flask import Flask, render_template, request, redirect, url_for, abort, jsonify
 from models import User, Book, Review
 from datetime import datetime
 import logging
+import json
 
 app = Flask(__name__)
 
@@ -156,41 +157,41 @@ def search():
                 return render_template("results.html", stat=stat)
 
 
-@app.route("/book/<string:isbn>", methods=["GET","POST"])
+@app.route("/book/<string:isbn>", methods=["GET"])
 def bookdetails(isbn):
     response = goodreads_api(isbn)
     # print(response)
-    if request.method == "POST":
-        rating = request.form['star']
-        review = request.form['tbox']
-        review_data = db.query(Review).filter(and_(Review.isbn == isbn, Review.email == session["data"])).first()
-        if review_data is None:
-            try:
-                # print(session["data"])
-                ureview = Review(isbn=isbn, email=session["data"], rating=rating, review=review, timestamp=datetime.now())
-                # print(ureview.isbn,ureview.email,ureview.rating,ureview.review,ureview.timestamp)
-                total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
-                response["average_score"] = str(round(total_rating,2))
-                response["review_count"] = str(response["review_count"] + 1)
-                db.add(ureview)
-                # print("DB added")
-            except:
-                return "Something went wrong.Please try again"
-            db.commit()
-            # print("After commit")
-            existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
-            # print("After query")
-            return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'], average_rating=response['average_score'], rating=rating,review=review,details=existing_reviews, button_text = "Edit your review")
-        else:
-            msg = "You have already reviewed this book. You can edit your review below."
-            review_data.rating = rating
-            review_data.review = review
-            total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
-            response["average_score"] = str(round(total_rating,2))
-            db.commit()
-            existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
-            return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'],average_rating=response['average_score'], rating=review_data.rating,review=review_data.review,details=existing_reviews, button_text = "Edit your review", msg = msg)
-    elif request.method == "GET":
+    # if request.method == "POST":
+    #     rating = request.form['star']
+    #     review = request.form['tbox']
+    #     review_data = db.query(Review).filter(and_(Review.isbn == isbn, Review.email == session["data"])).first()
+    #     if review_data is None:
+    #         try:
+    #             # print(session["data"])
+    #             ureview = Review(isbn=isbn, email=session["data"], rating=rating, review=review, timestamp=datetime.now())
+    #             # print(ureview.isbn,ureview.email,ureview.rating,ureview.review,ureview.timestamp)
+    #             total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
+    #             response["average_score"] = str(round(total_rating,2))
+    #             response["review_count"] = str(response["review_count"] + 1)
+    #             db.add(ureview)
+    #             # print("DB added")
+    #         except:
+    #             return "Something went wrong.Please try again"
+    #         db.commit()
+    #         # print("After commit")
+    #         existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
+    #         # print("After query")
+    #         return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'], average_rating=response['average_score'], rating=rating,review=review,details=existing_reviews, button_text = "Edit your review")
+    #     else:
+    #         msg = "You have already reviewed this book. You can edit your review below."
+    #         review_data.rating = rating
+    #         review_data.review = review
+    #         total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
+    #         response["average_score"] = str(round(total_rating,2))
+    #         db.commit()
+    #         existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
+    #         return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'],average_rating=response['average_score'], rating=review_data.rating,review=review_data.review,details=existing_reviews, button_text = "Edit your review", msg = msg)
+    if request.method == "GET":
         if session.get('data') is not None:
             rev = db.query(Review).filter(and_(Review.isbn == isbn, Review.email == session["data"])).first()
             existing_reviews = db.query(Review).filter_by(isbn = isbn).order_by(desc(Review.timestamp)).all()
@@ -219,3 +220,46 @@ def goodreads_api(isbn):
     response = dict(zip(keys, values))
     logging.error(response)
     return response
+
+@app.route("/api/review/<string:isbn>", methods=["POST"])
+def review(isbn):
+    response = goodreads_api(isbn)
+    if request.method == "POST":
+        content = request.get_json(force=True)
+        # rating = request.form['star']
+        # review = request.form['tbox']
+        print(content)
+        print(content)
+        rating = content['rating']
+        review = content['review']
+        review_data = db.query(Review).filter(and_(Review.isbn == isbn, Review.email == session["data"])).first()
+        if review_data is None:
+            try:
+                # print(session["data"])
+                ureview = Review(isbn=isbn, email=session["data"], rating=rating, review=review, timestamp=datetime.now())
+                # print(ureview.isbn,ureview.email,ureview.rating,ureview.review,ureview.timestamp)
+                total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
+                response["average_score"] = str(round(total_rating,2))
+                response["review_count"] = str(response["review_count"] + 1)
+                db.add(ureview)
+                # print("DB added")
+            except:
+                return "Something went wrong.Please try again"
+            db.commit()
+            # print("After commit")
+            existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
+            print(existing_reviews)
+            # print("After query")
+            # return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'], average_rating=response['average_score'], rating=rating,review=review,details=existing_reviews, button_text = "Edit your review")
+            return jsonify({"success" : True,"title" : response['title'], "author" : response['author'], "isbn" : response['isbn'], "year" : response['year'], "review_count" : response['review_count'], "average_rating" : response['average_score'], "rating" : rating,"review" : review,"details" : existing_reviews, "button_text" : "Edit your review"})
+        else:
+            msg = "You have already reviewed this book. You can edit your review below."
+            review_data.rating = rating
+            review_data.review = review
+            total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
+            response["average_score"] = str(round(total_rating,2))
+            db.commit()
+            existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
+            print(existing_reviews)
+            # return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'],average_rating=response['average_score'], rating=review_data.rating,review=review_data.review,details=existing_reviews, button_text = "Edit your review", msg = msg)
+            return jsonify({"success" : True,"title" : response['title'], "author" : response['author'], "isbn" : response['isbn'], "year" : response['year'], "review_count" : response['review_count'], "average_rating" : response['average_score'], "rating" : rating,"review" : review,"details" : existing_reviews, "button_text" : "Edit your review", "msg" : msg})
