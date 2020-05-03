@@ -160,37 +160,6 @@ def search():
 @app.route("/book/<string:isbn>", methods=["GET"])
 def bookdetails(isbn):
     response = goodreads_api(isbn)
-    # print(response)
-    # if request.method == "POST":
-    #     rating = request.form['star']
-    #     review = request.form['tbox']
-    #     review_data = db.query(Review).filter(and_(Review.isbn == isbn, Review.email == session["data"])).first()
-    #     if review_data is None:
-    #         try:
-    #             # print(session["data"])
-    #             ureview = Review(isbn=isbn, email=session["data"], rating=rating, review=review, timestamp=datetime.now())
-    #             # print(ureview.isbn,ureview.email,ureview.rating,ureview.review,ureview.timestamp)
-    #             total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
-    #             response["average_score"] = str(round(total_rating,2))
-    #             response["review_count"] = str(response["review_count"] + 1)
-    #             db.add(ureview)
-    #             # print("DB added")
-    #         except:
-    #             return "Something went wrong.Please try again"
-    #         db.commit()
-    #         # print("After commit")
-    #         existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
-    #         # print("After query")
-    #         return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'], average_rating=response['average_score'], rating=rating,review=review,details=existing_reviews, button_text = "Edit your review")
-    #     else:
-    #         msg = "You have already reviewed this book. You can edit your review below."
-    #         review_data.rating = rating
-    #         review_data.review = review
-    #         total_rating = ((float(response["average_score"]) * response["rating_count"]) + int(rating))/(response["rating_count"] + 1)
-    #         response["average_score"] = str(round(total_rating,2))
-    #         db.commit()
-    #         existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
-    #         return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'],average_rating=response['average_score'], rating=review_data.rating,review=review_data.review,details=existing_reviews, button_text = "Edit your review", msg = msg)
     if request.method == "GET":
         if session.get('data') is not None:
             rev = db.query(Review).filter(and_(Review.isbn == isbn, Review.email == session["data"])).first()
@@ -228,8 +197,6 @@ def review(isbn):
         content = request.get_json(force=True)
         # rating = request.form['star']
         # review = request.form['tbox']
-        print(content)
-        print(content)
         rating = content['rating']
         review = content['review']
         review_data = db.query(Review).filter(and_(Review.isbn == isbn, Review.email == session["data"])).first()
@@ -248,10 +215,14 @@ def review(isbn):
             db.commit()
             # print("After commit")
             existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
-            print(existing_reviews)
+            exist_reviews = []
+            for result in existing_reviews:
+                details = {"Email" : result.email, "Rating" : result.rating, "Review" : result.review}
+                exist_reviews.append(details)
+            print(exist_reviews)
             # print("After query")
             # return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'], average_rating=response['average_score'], rating=rating,review=review,details=existing_reviews, button_text = "Edit your review")
-            return jsonify({"success" : True,"title" : response['title'], "author" : response['author'], "isbn" : response['isbn'], "year" : response['year'], "review_count" : response['review_count'], "average_rating" : response['average_score'], "rating" : rating,"review" : review,"details" : existing_reviews, "button_text" : "Edit your review"})
+            return jsonify({"success" : True,"title" : response['title'], "author" : response['author'], "isbn" : response['isbn'], "year" : response['year'], "review_count" : response['review_count'], "average_rating" : response['average_score'], "rating" : rating,"review" : review,"details" : exist_reviews, "button_text" : "Edit your review"})
         else:
             msg = "You have already reviewed this book. You can edit your review below."
             review_data.rating = rating
@@ -260,6 +231,11 @@ def review(isbn):
             response["average_score"] = str(round(total_rating,2))
             db.commit()
             existing_reviews = db.query(Review).filter_by(isbn=isbn).order_by(desc(Review.timestamp)).all()
-            print(existing_reviews)
+            # print(existing_reviews)
+            exist_reviews = []
+            for result in existing_reviews:
+                details = {"Email" : result.email, "Rating" : result.rating, "Review" : result.review}
+                exist_reviews.append(details)
+            print(exist_reviews)
             # return render_template("book-layout.html", title=response['title'], author=response['author'], isbn=response['isbn'], year=response['year'], review_count=response['review_count'],average_rating=response['average_score'], rating=review_data.rating,review=review_data.review,details=existing_reviews, button_text = "Edit your review", msg = msg)
-            return jsonify({"success" : True,"title" : response['title'], "author" : response['author'], "isbn" : response['isbn'], "year" : response['year'], "review_count" : response['review_count'], "average_rating" : response['average_score'], "rating" : rating,"review" : review,"details" : existing_reviews, "button_text" : "Edit your review", "msg" : msg})
+            return jsonify({"success" : True,"title" : response['title'], "author" : response['author'], "isbn" : response['isbn'], "year" : response['year'], "review_count" : response['review_count'], "average_rating" : response['average_score'], "rating" : rating,"review" : review,"details" : exist_reviews, "button_text" : "Edit your review", "msg" : msg})
