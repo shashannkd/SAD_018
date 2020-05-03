@@ -1148,3 +1148,352 @@ ERROR:root:{'title': 'Good Grief', 'author': 'Lolly Winston', 'year': '2004', 'i
 INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:09:33] "GET /book/0446694843 HTTP/1.1" 200 -
 ERROR:root:{'title': 'Good Grief', 'author': 'Lolly Winston', 'year': '2004', 'isbn': '0446694843', 'review_count': 40416, 'average_score': '3.73', 'rating_count': 25990}
 INFO:werkzeug:127.0.0.1 - - [02/May/2020 19:09:43] "POST /api/review/0446694843 HTTP/1.1" 500 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 20:13:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 20:13:16] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 20:13:27] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293344, 'average_score': '3.92', 'rating_count': 101754}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 20:13:36] "GET /book/1250077001 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293344, 'average_score': '3.92', 'rating_count': 101754}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 20:13:50] "POST /api/review/1250077001 HTTP/1.1" 500 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293344, 'average_score': '3.92', 'rating_count': 101754}
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 20:14:01] "GET /book/1250077001 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2020 20:14:02] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:24] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:25] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:37] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:38] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:40] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:40] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:49] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:21:50] "GET /static/css/results.css HTTP/1.1" 200 -
+ERROR:root:{'title': 'Furiously Happy', 'author': 'Jenny  Lawson', 'year': '2015', 'isbn': '1250077001', 'review_count': 293442, 'average_score': '3.92', 'rating_count': 101794}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:22:06] "GET /book/1250077001 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:22:06] "GET /static/css/bookdetails.css HTTP/1.1" 200 -
+ERROR:root:{'title': 'Happy Ever After', 'author': 'Nora Roberts', 'year': '2010', 'isbn': '1423368991', 'review_count': 67522, 'average_score': '4.17', 'rating_count': 44693}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:22:30] "GET /book/1423368991 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Happy Ever After', 'author': 'Nora Roberts', 'year': '2010', 'isbn': '1423368991', 'review_count': 67522, 'average_score': '4.17', 'rating_count': 44693}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:22:42] "POST /api/review/1423368991 HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Sai Teja\\Desktop\\Software Apps Development\\SAD_018\\project1\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:26:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:26:42] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:26:58] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Blood', 'author': 'John Sandford', 'year': '2010', 'isbn': '0399156909', 'review_count': 30232, 'average_score': '4.22', 'rating_count': 21581}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:27:10] "GET /book/0399156909 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Blood', 'author': 'John Sandford', 'year': '2010', 'isbn': '0399156909', 'review_count': 30232, 'average_score': '4.22', 'rating_count': 21581}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:27:23] "POST /api/review/0399156909 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Blood', 'author': 'John Sandford', 'year': '2010', 'isbn': '0399156909', 'review_count': 30232, 'average_score': '4.22', 'rating_count': 21581}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:27:42] "GET /book/0399156909 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:27:42] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Blood', 'author': 'John Sandford', 'year': '2010', 'isbn': '0399156909', 'review_count': 30232, 'average_score': '4.22', 'rating_count': 21581}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:28:37] "POST /api/review/0399156909 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Blood', 'author': 'John Sandford', 'year': '2010', 'isbn': '0399156909', 'review_count': 30232, 'average_score': '4.22', 'rating_count': 21581}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:28:40] "GET /book/0399156909 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:28:45] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:41:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:41:49] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:42:01] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Monkey', 'author': 'Carl Hiaasen', 'year': '2013', 'isbn': '0307272591', 'review_count': 53947, 'average_score': '3.69', 'rating_count': 31107}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:42:10] "GET /book/0307272591 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Monkey', 'author': 'Carl Hiaasen', 'year': '2013', 'isbn': '0307272591', 'review_count': 53947, 'average_score': '3.69', 'rating_count': 31107}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:42:25] "POST /api/review/0307272591 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:44:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:44:16] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:44:28] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Luck and Trouble', 'author': 'Lee Child', 'year': '2007', 'isbn': '0385340559', 'review_count': 78506, 'average_score': '4.19', 'rating_count': 52291}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:44:37] "GET /book/0385340559 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Luck and Trouble', 'author': 'Lee Child', 'year': '2007', 'isbn': '0385340559', 'review_count': 78506, 'average_score': '4.19', 'rating_count': 52291}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:44:52] "POST /api/review/0385340559 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Bad Luck and Trouble', 'author': 'Lee Child', 'year': '2007', 'isbn': '0385340559', 'review_count': 78506, 'average_score': '4.19', 'rating_count': 52291}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:45:02] "GET /book/0385340559 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:45:04] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:46:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:46:31] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:46:42] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:46:49] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:47:00] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:49:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:49:35] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:49:51] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:49:51] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:49:58] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:51:01] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:52:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:52:22] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:52:35] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:52:42] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:52:54] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:54:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:54:31] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:54:44] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:54:49] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:55:01] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:55:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:55:41] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:55:52] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:55:57] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:56:07] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:57:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:57:09] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:57:19] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:57:24] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:57:35] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:57:49] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:57:50] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:58:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:58:55] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:59:07] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:59:13] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 17:59:28] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:01:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:01:15] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:01:26] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:01:32] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:01:42] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:03:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:03:29] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:03:41] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:03:48] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:04:27] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:04:28] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:10:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:10:13] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:10:24] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:10:29] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:10:37] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:10:42] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:11:16] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:11:16] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:11:27] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:12:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:12:59] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:13:11] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:13:17] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:13:33] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:15:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:15:08] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:15:19] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:15:24] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:15:35] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:17:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:17:21] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:17:32] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:17:37] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:17:47] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:18:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:18:26] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:18:37] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:18:43] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:18:57] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:26:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:26:46] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:26:57] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:27:02] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:27:12] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:28:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:28:32] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:28:43] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:28:48] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:28:58] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:29:29] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:29:30] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:29:39] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:32:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:32:37] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:32:48] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:32:57] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:33:09] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:33:42] "GET / HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:34:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:34:15] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:34:25] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:34:29] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:36:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:36:21] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:36:32] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:36:39] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:38:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:38:28] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:38:39] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:38:45] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:18] "GET /static/css/styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:19] "GET /static/css/images/one.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:31] "POST /auth HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:31] "GET /static/css/details.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:34] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:34] "GET /static/css/search.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:42] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:42] "GET /static/css/results.css HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:50] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:40:50] "GET /static/css/bookdetails.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:41:19] "GET /static/css/bookdetails.css.map HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:42:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:42:21] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:42:32] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:42:38] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:42:49] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:45:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:45:16] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:45:29] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:45:34] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:45:45] "POST /api/review/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:46:04] "GET /static/css/bookdetails.css.map HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:49:02] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:49:03] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:49:22] "POST /book/1423108760 HTTP/1.1" 405 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:49:23] "GET /favicon.ico HTTP/1.1" 404 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:49:25] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:50:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:50:10] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:50:23] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:50:29] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:53:17] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:53:18] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:54:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:54:53] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:55:06] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38198, 'average_score': '4.20', 'rating_count': 21487}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:55:11] "GET /book/0060744871 HTTP/1.1" 200 -
+ERROR:root:{'title': 'The Pursuit of Happyness', 'author': 'Chris Gardner', 'year': '2006', 'isbn': '0060744871', 'review_count': 38198, 'average_score': '4.20', 'rating_count': 21487}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:55:22] "POST /api/review/0060744871 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:58:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:58:22] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:58:34] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:58:39] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:58:50] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 18:59:08] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:00:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:00:24] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:00:35] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:00:41] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:01:03] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:03:07] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:04:23] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:04:44] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:07:13] "GET /book/1423108760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:07:24] "GET /static/css/images/favicon.ico HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56587, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:08:36] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:11:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:11:15] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:11:26] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56588, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:11:31] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56588, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:11:41] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:14:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:14:14] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:14:26] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56588, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:14:33] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56588, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:14:44] "POST /api/review/1423108760 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:20:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:20:39] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:20:50] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56588, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:20:55] "GET /book/1423108760 HTTP/1.1" 200 -
+ERROR:root:{'title': "Bad Girls Don't Die", 'author': 'Katie Alender', 'year': '2009', 'isbn': '1423108760', 'review_count': 56588, 'average_score': '4.04', 'rating_count': 20777}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 19:21:08] "POST /api/review/1423108760 HTTP/1.1" 200 -
