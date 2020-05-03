@@ -22,9 +22,40 @@
         <link rel="stylesheet" href="../static/css/bookdetails.css">
         <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
         <title>{{title}}</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+				document.getElementById('form').onsubmit = () => {
+					const request = new XMLHttpRequest();
+					const review = document.getElementById('review').value;
+                    const rating = document.querySelector('input[name="star"]:checked').value;
+					request.open('POST', '/api/review/{{isbn}}');
+					request.onload = () => {
+						const data = JSON.parse(request.responseText);
+						if(data.success){
+							document.getElementById('score').innerHTML = "My rating: ".bold()+ `${data.rating}/5`;
+							document.getElementById('matter').innerHTML = "My review: ".bold() + `${data.review}`;
+                            if(data.details.length > 0)
+                            {
+                                var matter = "";
+                                data.details.forEach(result => {
+                                    matter += "<li><p>" + "Email: ".bold() + result['Email'] + "</p><p>" + "Rating: ".bold() + result['Rating']+"/5" + "</p><p>" + "Review: ".bold() + result['Review'] + "</p></li>"
+                                });
+                                document.getElementById('user_reviews').innerHTML = matter
+                            }
+						}
+					}
+                    request.send(JSON.stringify({"review" : review, "rating" : rating}));
+                    $('#modalContactForm').modal('hide');
+                    $('body').removeClass('modal-open');
+                    $('.modal-backdrop.show').css('opacity','0');
+                    $('.modal-backdrop').css('z-index','-1')
+                    return false;
+                }
+			});
+        </script>
     </head>
 
-    <body>
+    <body id = "body">
         <header>
             <div id="logout">
                 <a href="{{url_for('logout')}}" title="Log Out">
@@ -47,36 +78,38 @@
             <div id="book-metadata">
                 <ul>
                     <li id="detail-item">
-                        <p style="font-size: 50px;">{{title}}</p>
+                        <p id = "title" style="font-size: 50px;">{{title}}</p>
                     </li>
                     <li id="detail-item">
-                        <h2 style="font-style: oblique;">{{author}}</h2>
+                        <h2 id = "author" style="font-style: oblique;">{{author}}</h2>
                     </li>
                     <li id="detail-item">
-                        <h2 style="font-style: oblique;">{{year}}</h2>
+                        <h2 id = "year" style="font-style: oblique;">{{year}}</h2>
                     </li>
                     <li id="detail-item">
-                        <h3>ISBN: {{isbn}}</h3>
+                        <h3 id = "isbn">ISBN: {{isbn}}</h3>
                     </li>
                     <li id="detail-item">
-                        <h3>No. of Reviews: {{review_count}}</h3>
+                        <h3 id = "review_count">No. of Reviews: {{review_count}}</h3>
                     </li>
                     <li id="detail-item">
-                        <h3>Average rating: {{average_rating}}</h3>
+                        <h3 id = "average_rating">Average rating: {{average_rating}}</h3>
                     </li>
                 </ul>
             </div>
             <div id="review-pane">
-                {% if rating and review %}
+                <!-- {% if rating and review %}
                     <h3><strong>My rating:</strong> {{ rating }}/5</h3>
                     <h3><strong>My review:</strong> {{ review }}</h3>
                     {% else %}
                         <h3><strong>My rating:</strong> Not posted</h3>
                         <h3><strong>My review:</strong> Not posted</h3>
-                {% endif %}
+                {% endif %} -->
+                <h3 id = "score"><b>My rating:</b> {{ rating }}/5</h3>
+                <h3 id = "matter"><b>My review:</b> {{ review }}</h3>
             </div>
         </div>
-        <form action="{{ url_for('bookdetails',isbn = isbn) }}" method = "POST">
+        <form id = "form" action="{{ url_for('bookdetails',isbn = isbn) }}" method = "POST">
             <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -101,12 +134,12 @@
                         <div class="modal-body mx-3">
                             <div class="md-form">
                             <i class="fas fa-pencil prefix grey-text"></i>
-                            <textarea type="text" id="form8" name = "tbox" class="md-textarea form-control" rows="4"></textarea>
+                            <textarea id = "review" type="text" id="form8" name = "tbox" class="md-textarea form-control" rows="4"></textarea>
                             <label data-error="wrong" data-success="right" for="form8">Your Review</label>
                             </div>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <button class="btn btn-dark btn-rounded" type="submit" style = "border-radius: 5px;">Submit</button>
+                            <button id = "submit_button" class="btn btn-dark btn-rounded" type="submit" style = "border-radius: 5px;">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -122,18 +155,19 @@
             </div>
             <div id = "book-reviews">
                 <h2><strong>Book Reviews</strong></h2>
-                <ul>
+                <ul id = "user_reviews">
                 {% if details %}
                     {% for i in details %}
                         <li>
-                            <p><strong>Email:</strong> {{ i.email }}</p>
-                            <p><strong>Rating:</strong> {{i.rating}}/5</p>
-                            <p><strong>Review:</strong> {{i.review}}</p>
+                            <p><b>Email:</b> {{ i.email }}</p>
+                            <p><b>Rating:</b> {{i.rating}}/5</p>
+                            <p><b>Review:</b> {{i.review}}</p>
                         </li>
                     {% endfor %}
                     {% else %}
                         <p>No reviews for this book yet.</p>
                 {% endif %}
+
                 </ul>
             </div>
         </div>
