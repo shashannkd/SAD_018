@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" -->
-    <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/search.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="icon" href="../static/css/images/favicon.ico" type="image/gif" sizes="16x16">
+    <script type=text/javascript src="./static/js/search.js"></script>
     <title>Search Books Ville</title>
 </head>
 
@@ -30,12 +29,12 @@
             <a href="{{ url_for('details')}}" title="Go to Home">Books Ville</a>
         </div>
         <h3>{{msg}}</h3>
-        <form class="form-inline" method="POST" action="{{ url_for('search') }}">
+        <form class="form-inline" method="POST" id="form">
             <div class="form-group">
                 <div class="input-group wd">
-                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <input type="text" class="form-control" placeholder="Search" id="search" name="search">
                     <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit">
+                        <button class="btn btn-default" type="submit" id="btn">
                             <i class="glyphicon glyphicon-search"></i></button>
                     </div>
                 </div>
@@ -43,7 +42,7 @@
                 <div class="input-group ">
                     <label style="background-color: #023e81;color: #ccc; font-weight: 500;" for="filter"
                         class="input-group-addon">Filter</label>
-                    <select id="filter" name="comp" class="selectpicker form-control">
+                    <select id="filter" name="filter" class="selectpicker form-control">
                         {% for o in data %}
                         <option value="{{ o.field }}">{{ o.field }}</option>
                         {% endfor %}
@@ -53,6 +52,22 @@
         </form>
     </header>
 
+    <br><br>
+    <div class="container">
+        <table class="table table-bordered table-hover" style="margin : 0 auto;">
+            <!-- <h1>Search Results</h1> -->
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">S.No.</th>
+                    <th scope="col" class="col-sm-4">Title</th>
+                    <th scope="col" class="col-sm-3">ISBN</th>
+                </tr>
+            </thead>
+            {% set count = namespace(value=1) %}
+            <tbody id="results-info">
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

@@ -9,6 +9,7 @@ from models import User, Book
 # from flask_json import FLASK_JSON, JsonError, json_response, as_json
 from datetime import datetime
 import logging
+import json
 
 app = Flask(__name__)
 
@@ -119,74 +120,35 @@ def details():
     return render_template('details.html', name=name)
 
 
-@app.route("/search", methods=["GET", "POST"])
+@app.route("/search", methods=["GET"])
 def search():
     if request.method == "GET":
         return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
-    elif request.method == "POST":
-        s = ""
-        select = request.form.get('comp')
-        req = request.form.get('search')
-        like_format = '%{}%'.format(req)
-        if req == "":
-            return render_template("search.html", msg="Search query cannot be empty")
-        else:
-            if select == "ISBN":
-                stat = db.query(Book).filter(Book.isbn.like(
-                    like_format)).order_by(Book.title).all()
-            elif select == "Title":
-                stat = db.query(Book).filter(
-                    Book.title.like(like_format)).order_by(Book.title).all()
-            elif select == "Author":
-                stat = db.query(Book).filter(
-                    Book.author.like(like_format)).order_by(Book.title).all()
-            else:
-                stat = db.query(Book).filter(Book.year.like(
-                    like_format)).order_by(Book.title).all()
-                # db.query(Book).order_by(desc(User.time))
-            # stat=sorted(stat,)
-            if len(stat) == 0:
-                return render_template("noresult.html")
-            else:
-                return render_template("results.html", stat=stat)
 
 
-@app.route("/api/search", methods=["GET", "POST"])
+@app.route("/api/search", methods=["POST"])
 def api_search():
-    if request.method == "GET":
-        return render_template("search.html", data=[{'field': 'ISBN'}, {'field': 'Title'}, {'field': 'Author'}, {'field': 'Year'}])
-    else:
-        data = request.get_json()
-        select = data['comp']
-        req = data['search']
-        like_format = '%{}%'.format(req)
-        if select == "ISBN":
+    if request.method == "POST":
+        data = request.get_json(force=True)
+        filter = data['filter']
+        search = data['search']
+        like_format = '%{}%'.format(search)
+        print(filter, search)
+        if filter == "ISBN":
             stat = db.query(Book).filter(Book.isbn.like(
                 like_format)).order_by(Book.title).all()
-        elif select == "Title":
+        elif filter == "Title":
             stat = db.query(Book).filter(
                 Book.title.like(like_format)).order_by(Book.title).all()
-        elif select == "Author":
+        elif filter == "Author":
             stat = db.query(Book).filter(
                 Book.author.like(like_format)).order_by(Book.title).all()
         else:
             stat = db.query(Book).filter(Book.year.like(
                 like_format)).order_by(Book.title).all()
-        if len(stat) == 0:
-            return render_template("noresult.html")
-        else:
-            return render_template("results.html", stat=stat)
-
-        response = []
-        for row in stat:
-            dat = {}
-            dat["title"] = row.title
-            dat["isbn"] = row.isbn
-            dat["author"] = row.author
-            dat["year"] = row.year
-            response.append(dat)
-
-
-@app.route("/book/<string:isbn>")
-def bookdetails(isbn):
-    return render_template("isbnvar.html", isbn=isbn)
+        if stat != None:
+            results = []
+            for sta in stat:
+                detail = {"ISBN": sta.isbn, "title": sta.title}
+                results.append(detail)
+            return jsonify({"success": True, "results": results})

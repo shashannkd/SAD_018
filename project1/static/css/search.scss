@@ -1,9 +1,10 @@
 $title-size: 40px;
 body {
     text-align: center;
+    background-color: #c9c9c7;
     margin: 10px;
-    background-image:url("./images/one.jpg");
     background-size: cover;
+
     header {
         div#title {
             text-align: center;
@@ -30,5 +31,26 @@ body {
         }
         width: 300px;
     }
+    .container{
+         a {
+            color: #023e81;
+          }
+          thead{
+              background-color: black;
+              color: white;
+          }
+         th,td{
+        text-align: center;
+         }
+
+
+    tr {
+    :hover {
+            font-weight: bold;
+            background-color: #eae9e9;
+        }
+    }
+}
+
 
 }

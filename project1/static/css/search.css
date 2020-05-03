@@ -1,7 +1,7 @@
 body {
   text-align: center;
+  background-color: #c9c9c7;
   margin: 10px;
-  background-image: url("./images/one.jpg");
   background-size: cover;
 }
 
@@ -31,5 +31,23 @@ body .wd {
 body .wd:focus {
   background-color: #111;
   color: #ccc;
+}
+
+body .container a {
+  color: #023e81;
+}
+
+body .container thead {
+  background-color: black;
+  color: white;
+}
+
+body .container th, body .container td {
+  text-align: center;
+}
+
+body .container tr :hover {
+  font-weight: bold;
+  background-color: #eae9e9;
 }
 /*# sourceMappingURL=search.css.map */
