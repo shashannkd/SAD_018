@@ -1614,3 +1614,16 @@ ERROR:root:{'title': 'Half Girlfriend', 'author': 'Chetan Bhagat', 'year': '2014
 INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:56:10] "POST /api/review/8129135728 HTTP/1.1" 200 -
 ERROR:root:{'title': 'Half Girlfriend', 'author': 'Chetan Bhagat', 'year': '2014', 'isbn': '8129135728', 'review_count': 66842, 'average_score': '3.15', 'rating_count': 31128}
 INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:56:24] "POST /api/review/8129135728 HTTP/1.1" 200 -
+ERROR:root:test@test.com
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:58:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:58:07] "GET /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:58:26] "POST /search HTTP/1.1" 200 -
+ERROR:root:{'title': 'Two States', 'author': 'Chetan Bhagat', 'year': '2009', 'isbn': '8129115301', 'review_count': 120448, 'average_score': '3.43', 'rating_count': 78945}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:58:31] "GET /book/8129115301 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Two States', 'author': 'Chetan Bhagat', 'year': '2009', 'isbn': '8129115301', 'review_count': 120448, 'average_score': '3.43', 'rating_count': 78945}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:58:54] "POST /api/review/8129115301 HTTP/1.1" 200 -
+ERROR:root:{'title': 'Two States', 'author': 'Chetan Bhagat', 'year': '2009', 'isbn': '8129115301', 'review_count': 120448, 'average_score': '3.43', 'rating_count': 78945}
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:59:05] "POST /api/review/8129115301 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:59:10] "GET /logout HTTP/1.1" 302 -
+ERROR:root:None
+INFO:werkzeug:127.0.0.1 - - [03/May/2020 20:59:10] "GET / HTTP/1.1" 200 -
