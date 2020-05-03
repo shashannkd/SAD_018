@@ -32,25 +32,23 @@
 					request.onload = () => {
 						const data = JSON.parse(request.responseText);
 						if(data.success){
-							document.getElementById('score').innerHTML = `My rating: ${data.rating}/5`;
-							document.getElementById('matter').innerHTML = `My review: ${data.review}`;
+							document.getElementById('score').innerHTML = "My rating: ".bold()+ `${data.rating}/5`;
+							document.getElementById('matter').innerHTML = "My review: ".bold() + `${data.review}`;
                             if(data.details.length > 0)
                             {
                                 var matter = "";
                                 data.details.forEach(result => {
-                                    matter += "<li><p>" + "Email : " + result['Email'] + "</p><p>" + "Rating : " + result['Rating']+"/5" + "</p><p>" + "Review : " + result['Review'] + "</p></li>"
+                                    matter += "<li><p>" + "Email: ".bold() + result['Email'] + "</p><p>" + "Rating: ".bold() + result['Rating']+"/5" + "</p><p>" + "Review: ".bold() + result['Review'] + "</p></li>"
                                 });
                                 document.getElementById('user_reviews').innerHTML = matter
                             }
 						}
 					}
                     request.send(JSON.stringify({"review" : review, "rating" : rating}));
-                    // document.getElementById('modalContactForm').style.display = "none";
-                    // document.getElementById('body').style.opacity = "1";
-                    // document.getElementById('mo').style.over = "none";
-                    // $('#modalContactForm').modal('hide');
-                    // $('body').removeClass('modal-open');
-                    // $('#modalContactForm').remove();
+                    $('#modalContactForm').modal('hide');
+                    $('body').removeClass('modal-open');
+                    $('.modal-backdrop.show').css('opacity','0');
+                    $('.modal-backdrop').css('z-index','-1')
                     return false;
                 }
 			});
@@ -58,7 +56,6 @@
     </head>
 
     <body id = "body">
-        <!-- <div id="overlay" onclick="off()"></div> -->
         <header>
             <div id="logout">
                 <a href="{{url_for('logout')}}" title="Log Out">
@@ -108,8 +105,8 @@
                         <h3><strong>My rating:</strong> Not posted</h3>
                         <h3><strong>My review:</strong> Not posted</h3>
                 {% endif %} -->
-                <h3 id = "score"><strong>My rating:</strong> {{ rating }}/5</h3>
-                <h3 id = "matter"><strong>My review:</strong> {{ review }}</h3>
+                <h3 id = "score"><b>My rating:</b> {{ rating }}/5</h3>
+                <h3 id = "matter"><b>My review:</b> {{ review }}</h3>
             </div>
         </div>
         <form id = "form" action="{{ url_for('bookdetails',isbn = isbn) }}" method = "POST">
@@ -162,9 +159,9 @@
                 {% if details %}
                     {% for i in details %}
                         <li>
-                            <p><strong>Email:</strong> {{ i.email }}</p>
-                            <p><strong>Rating:</strong> {{i.rating}}/5</p>
-                            <p><strong>Review:</strong> {{i.review}}</p>
+                            <p><b>Email:</b> {{ i.email }}</p>
+                            <p><b>Rating:</b> {{i.rating}}/5</p>
+                            <p><b>Review:</b> {{i.review}}</p>
                         </li>
                     {% endfor %}
                     {% else %}
